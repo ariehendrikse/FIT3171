@@ -1,3 +1,16 @@
+SQL> drop table enrolment purge;
+
+Table ENROLMENT dropped.
+
+SQL> drop table student purge;
+
+Table STUDENT dropped.
+
+SQL> drop table unit purge;
+
+Table UNIT dropped.
+
+SQL> 
 SQL> 
 SQL> create table student
   2      (
@@ -9,21 +22,8 @@ SQL> create table student
   8          CONSTRAINT student_pk PRIMARY KEY ( stu_nbr )
   9      )   ;
 
-Error starting at line : 7 in command -
-create table student
-    (
-        stu_nbr     numeric(8),
-        stu_lname   varchar(50) NOT NULL,
-        stu_fname   varchar(50) NOT NULL,
-        stu_dob     date NOT NULL,
-        CONSTRAINT min_stu_nbr CHECK (stu_nbr >= 1000000),
-        CONSTRAINT student_pk PRIMARY KEY ( stu_nbr )
-    )
-Error report -
-ORA-00955: name is already used by an existing object
-00955. 00000 -  "name is already used by an existing object"
-*Cause:    
-*Action:
+Table STUDENT created.
+
 SQL> 
 SQL> create table unit
   2      (
@@ -32,18 +32,8 @@ SQL> create table unit
   5          constraint unit_pk PRIMARY KEY ( unit_code )
   6      )   ;
 
-Error starting at line : 17 in command -
-create table unit
-    (
-        unit_code char(7) not null,
-        unit_name varchar(50) not null,
-        constraint unit_pk PRIMARY KEY ( unit_code )
-    )
-Error report -
-ORA-00955: name is already used by an existing object
-00955. 00000 -  "name is already used by an existing object"
-*Cause:    
-*Action:
+Table UNIT created.
+
 SQL> 
 SQL> create table enrolment
   2      (
@@ -62,9 +52,23 @@ SQL> create table enrolment
 
 Table ENROLMENT created.
 
-SQL> 
-SQL> commit;
+SQL> INSERT INTO student 
+  2      (
+  3          stu_nbr, stu_lname, stu_fname, stu_dob
+  4      )
+  5      VALUES
+  6      (
+  7          11111111,    'Bloggs',      'Fred',        '1-Jan-90'
+  8      );
 
-Commit complete.
+1 row inserted.
+
+SQL> 
+SQL> SELECT * FROM student
+  2  commit;
+
+   STU_NBR STU_LNAME                                          STU_FNAME                                          STU_DOB  
+---------- -------------------------------------------------- -------------------------------------------------- ---------
+  11111111 Bloggs                                             Fred                                               01/JAN/90
 
 SQL> spool off
