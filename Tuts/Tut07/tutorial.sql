@@ -29,8 +29,8 @@ create table enrolment
         unit_code       char(7) NOT NULL,
         enrol_year      numeric(4) NOT NULL,
         enrol_semester  char(1) NOT NULL,
-        enrol_mark      numeric(3) NOT NULL,
-        enrol_grade     char(2) NOT NULL,
+        enrol_mark      numeric(3),
+        enrol_grade     char(2),
         constraint enrol_pk PRIMARY KEY ( stu_nbr, unit_code ),
         constraint unit_fk foreign key ( unit_code )
             references unit ( unit_code ) on delete set null,
@@ -50,7 +50,7 @@ INSERT INTO student
     
 INSERT INTO unit 
     (
-        stu_nbr, stu_lname, stu_fname, stu_dob
+         unit_code,unit_name
     )
     VALUES
         ('FIT9999',     'FIT Last Unit'),
@@ -60,14 +60,26 @@ INSERT INTO unit
     ;
     
 INSERT INTO enrolment
-    (
-        (unit_code,unit_name)
-    )
+       (stu_nbr ,    unit_code  , enrol_year,  enrol_semester , enrol_mark , enrol_grade)
     VALUES
+         (11111111,'FIT5132',2013,1 ,35,'N'),
+         (11111111, 'FIT5016',2013,1,61,'C'),
+         (11111111, 'FIT5132',2013,2,42,'N),
+         (11111111, 'FIT5111',2013,2,76,'D),
+         (11111111, 'FIT5132',2014,2,,),
+         (11111111,'FIT5132',2013,2,83,'HD'),
+         (11111112,'FIT5111',2013,2,79,'D'),
+         (11111113,'FIT5132',2014,2,,),
+         (11111113,'FIT5111',2014,2,,),
+         (11111114,'FIT5111',2014,2,,);
+
+
+
+
         
 
 
-SELECT * FROM student
+SELECT * FROM student;
 commit;
 spool off
 set echo off
