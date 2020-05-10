@@ -1,0 +1,70 @@
+SQL> 
+SQL> create table student
+  2      (
+  3          stu_nbr     numeric(8),
+  4          stu_lname   varchar(50) NOT NULL,
+  5          stu_fname   varchar(50) NOT NULL,
+  6          stu_dob     date NOT NULL,
+  7          CONSTRAINT min_stu_nbr CHECK (stu_nbr >= 1000000),
+  8          CONSTRAINT student_pk PRIMARY KEY ( stu_nbr )
+  9      )   ;
+
+Error starting at line : 7 in command -
+create table student
+    (
+        stu_nbr     numeric(8),
+        stu_lname   varchar(50) NOT NULL,
+        stu_fname   varchar(50) NOT NULL,
+        stu_dob     date NOT NULL,
+        CONSTRAINT min_stu_nbr CHECK (stu_nbr >= 1000000),
+        CONSTRAINT student_pk PRIMARY KEY ( stu_nbr )
+    )
+Error report -
+ORA-00955: name is already used by an existing object
+00955. 00000 -  "name is already used by an existing object"
+*Cause:    
+*Action:
+SQL> 
+SQL> create table unit
+  2      (
+  3          unit_code char(7) not null,
+  4          unit_name varchar(50) not null,
+  5          constraint unit_pk PRIMARY KEY ( unit_code )
+  6      )   ;
+
+Error starting at line : 17 in command -
+create table unit
+    (
+        unit_code char(7) not null,
+        unit_name varchar(50) not null,
+        constraint unit_pk PRIMARY KEY ( unit_code )
+    )
+Error report -
+ORA-00955: name is already used by an existing object
+00955. 00000 -  "name is already used by an existing object"
+*Cause:    
+*Action:
+SQL> 
+SQL> create table enrolment
+  2      (
+  3          stu_nbr         numeric(8) NOT NULL,
+  4          unit_code       char(7) NOT NULL,
+  5          enrol_year      numeric(4) NOT NULL,
+  6          enrol_semester  char(1) NOT NULL,
+  7          enrol_mark      numeric(3) NOT NULL,
+  8          enrol_grade     char(2) NOT NULL,
+  9          constraint enrol_pk PRIMARY KEY ( stu_nbr, unit_code ),
+ 10          constraint unit_fk foreign key ( unit_code )
+ 11              references unit ( unit_code ) on delete set null,
+ 12          constraint stu_fk foreign key ( stu_nbr )
+ 13              references student ( stu_nbr ) on delete set null
+ 14      )   ;
+
+Table ENROLMENT created.
+
+SQL> 
+SQL> commit;
+
+Commit complete.
+
+SQL> spool off
