@@ -41,37 +41,40 @@ INSERT INTO student
     (
         stu_nbr, stu_lname, stu_fname, stu_dob
     )
-    VALUES
-        (11111111, 'Bloggs', 'Fred', '1-Jan-90'),
-        (11111112, 'Nice', 'Nick', '10-Oct-94'),
-        (11111113, 'Wheat', 'Wendy', '5-May-90'),
-        (11111114, 'Sheen', 'Cindy', '25-Dec-96')
+    WITH names AS
+        (SELECT 11111111, 'Bloggs', 'Fred', '1-Jan-90' FROM dual UNION ALL 
+        SELECT 11111112, 'Nice', 'Nick', '10-Oct-94' FROM dual UNION ALL 
+        SELECT 11111113, 'Wheat', 'Wendy', '5-May-90' FROM dual UNION ALL
+        SELECT 11111114, 'Sheen', 'Cindy', '25-Dec-96' FROM dual)
+    SELECT * FROM names
     ;
     
 INSERT INTO unit 
     (
          unit_code,unit_name
     )
-    VALUES
-        ('FIT9999',     'FIT Last Unit'),
-        ('FIT5132',     'Introduction to Databases'),
-        ('FIT5016',     'Project'),
-        ('FIT5111',     'Students Life')
+    WITH names AS
+        (SELECT 'FIT9999','FIT Last Unit' FROM dual UNION ALL 
+        SELECT 'FIT5132','Introduction to Databases' FROM dual UNION ALL 
+        SELECT 'FIT5016','Project' FROM dual UNION ALL 
+        SELECT 'FIT5111','Students Life' FROM dual)
+    SELECT * FROM names
     ;
     
 INSERT INTO enrolment
-       (stu_nbr ,    unit_code  , enrol_year,  enrol_semester , enrol_mark , enrol_grade)
-    VALUES
-         (11111111,'FIT5132',2013,1 ,35,'N'),
-         (11111111, 'FIT5016',2013,1,61,'C'),
-         (11111111, 'FIT5132',2013,2,42,'N),
-         (11111111, 'FIT5111',2013,2,76,'D),
-         (11111111, 'FIT5132',2014,2,,),
-         (11111111,'FIT5132',2013,2,83,'HD'),
-         (11111112,'FIT5111',2013,2,79,'D'),
-         (11111113,'FIT5132',2014,2,,),
-         (11111113,'FIT5111',2014,2,,),
-         (11111114,'FIT5111',2014,2,,);
+       (stu_nbr ,unit_code,enrol_year,enrol_semester,enrol_mark,enrol_grade)
+    WITH names AS
+         (SELECT 11111111,'FIT5132',2013,1 ,35,'N' FROM dual UNION ALL 
+         SELECT 11111111, 'FIT5016',2013,1,61,'C' FROM dual UNION ALL 
+         SELECT 11111111, 'FIT5132',2013,2,42,'N' FROM dual UNION ALL 
+         SELECT 11111111, 'FIT5111',2013,2,76,'D' FROM dual UNION ALL 
+         SELECT 11111111, 'FIT5132',2014,2,NULL,NULL FROM dual UNION ALL 
+         SELECT 11111111,'FIT5132',2013,2,83,'HD' FROM dual UNION ALL 
+         SELECT 11111112,'FIT5111',2013,2,79,'D' FROM dual UNION ALL 
+         SELECT 11111113,'FIT5132',2014,2,NULL,NULL FROM dual UNION ALL 
+         SELECT 11111113,'FIT5111',2014,2,NULL,NULL FROM dual UNION ALL 
+         SELECT 11111114,'FIT5111',2014,2,NULL,NULL FROM dual)
+         SELECT * FROM names;
 
 
 
