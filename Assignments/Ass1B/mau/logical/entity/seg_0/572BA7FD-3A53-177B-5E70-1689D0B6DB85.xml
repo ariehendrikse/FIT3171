@@ -23,10 +23,14 @@
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
+<constraintName>chk_min_thousand</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="art_id&gt;1000"/>
+</checkConstraint>
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="artist_code" id="5ADE3D76-BD5B-5479-8660-65185C69AAEE">
@@ -43,7 +47,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="art_title" id="D9B3C653-6C4C-21C8-DA21-E11694652CE7">
 <createdBy>ariehendrikse</createdBy>
@@ -67,11 +71,15 @@
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
+<constraintName>chk_min_pos</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>8</dataTypePrecision>
 <dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="art_min_price&gt;0"/>
+</checkConstraint>
 <ownDataTypeParameters>,8,2</ownDataTypeParameters>
 </Attribute>
 <Attribute name="art_media_desc" id="837A5038-B1AB-AAD3-6B59-42BB2AF115A0">

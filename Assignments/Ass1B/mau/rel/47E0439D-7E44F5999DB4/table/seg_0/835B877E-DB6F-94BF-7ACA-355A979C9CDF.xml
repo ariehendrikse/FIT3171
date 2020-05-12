@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="835B877E-DB6F-94BF-7ACA-355A979C9CDF" name="STYLE">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>49A4FF0F-B54D-101F-1119-85BB1BB3D3B6</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="style_name" id="B9A65ED9-30DA-49D1-3D1B-DA86BD5BE283">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[name of the style]]></commentInRDBMS>
+<generatorID>B90BBE35-2CC6-4305-CF2B-E1D29842DD3C</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STYLE_style_name" id="771134B7-045D-97C9-F505-6C99AA827C04">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[name of the style]]></commentInRDBMS>
+<generatorID>144E7A6E-BEC3-0635-246B-EE099C189130</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CBCAC086-3C8A-40E4-1F80-22BF73F4EF23" referredColumn="B9A65ED9-30DA-49D1-3D1B-DA86BD5BE283"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE0BC359-B321-1764-1C0C-B52337146C5A" name="STYLE_PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>26378022-F388-63E8-132A-716C66B49162</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9A65ED9-30DA-49D1-3D1B-DA86BD5BE283"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="59B8F36B-4856-D245-17F5-5DA7F6438C10" name="STYLE_STYLE_FK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>4CF2746B-8D42-EE7A-4C6C-C0712A37856F</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="771134B7-045D-97C9-F505-6C99AA827C04"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

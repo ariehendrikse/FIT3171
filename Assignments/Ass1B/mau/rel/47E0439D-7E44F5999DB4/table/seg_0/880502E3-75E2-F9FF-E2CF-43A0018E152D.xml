@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="880502E3-75E2-F9FF-E2CF-43A0018E152D" name="ARTIST">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>745CD25A-8C2B-7537-4491-780E6D455B73</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="artist_code" id="69F30CDE-6F5F-552C-10A1-6EEE5416D4B9">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist code]]></commentInRDBMS>
+<generatorID>136F8281-7F3F-7A26-952D-15CCFE206368</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="artist_fname" id="DF1D7AF4-8EC3-8BD0-318D-B4BB1A9C54D4">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist first name]]></commentInRDBMS>
+<generatorID>16863F4F-D802-B071-A2B2-4D604BFEB10E</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="artist_lname" id="A6F30436-DDB0-C74B-9871-91C934DCA1D7">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist last name]]></commentInRDBMS>
+<generatorID>BC5C52A9-3111-0E74-A3BF-5602152DF8E0</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="artist_no_works" id="9D593527-BFE8-E06F-1A15-BD9C252FBF76">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[number of artist artowrks created]]></commentInRDBMS>
+<generatorID>293426E1-5232-6825-0644-2953FCA835DC</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="artist_street" id="7ED3D95A-7150-A303-BB27-251E675221B9">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist street of his address]]></commentInRDBMS>
+<generatorID>CB61CB3B-C6E7-47B2-A38D-FC5EDB3AAE49</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="artist_town" id="C986E35E-CBAA-5672-2973-9087D35717F3">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[town of artist's address]]></commentInRDBMS>
+<generatorID>D5750B84-FB16-E316-18DA-383BDA4F28F2</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="artist_state" id="D3C21118-AB40-B82B-026D-44A2F75D6327">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the state from the artists address]]></commentInRDBMS>
+<generatorID>10DD882D-2214-D79E-841E-A66A7DF8FF9F</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="385397DB-868D-6856-1830-9C30A97367B7" name="ARTIST_PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>FEA70B07-1402-0BCA-C7EE-AD1670D634EC</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69F30CDE-6F5F-552C-10A1-6EEE5416D4B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

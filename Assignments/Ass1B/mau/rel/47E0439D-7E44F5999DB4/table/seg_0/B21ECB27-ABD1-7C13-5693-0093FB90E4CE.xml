@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B21ECB27-ABD1-7C13-5693-0093FB90E4CE" name="EXHIBIT">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>384E8A8B-73AE-74D6-03C7-E30CB46E8F5E</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="exh_start_date" id="2D908847-5692-79FE-7B7E-B3B02BE6E120">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[start date of exhibit]]></commentInRDBMS>
+<generatorID>991670D4-FDAC-CBD8-6E09-15017D833632</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="exh_end_date" id="B427D50F-A669-491F-8046-689249E13A0B">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[end date of exhibit]]></commentInRDBMS>
+<generatorID>86B1DD97-737E-57E1-957D-FC92E1A3434D</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GALLERY_gal_id" id="B1522DF8-3296-6A27-23EA-85D2A61A136F">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[gallery id]]></commentInRDBMS>
+<generatorID>8A86B942-1D84-3BBC-5112-595BC83F34CB</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="47BF4FBE-FA5C-A67B-0422-BD56641F694F" referredColumn="2D25E704-F49A-4DF6-AB72-18F4CADEB5D6"/>
+</associations>
+</Column>
+<Column name="ARTWORK_art_id" id="74239CEC-2EBA-B2C2-E741-440F9436C0BA">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[artowrk id]]></commentInRDBMS>
+<generatorID>D6311E3A-1AC6-242A-0EC8-2AACC052346A</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="58B7D4E6-5ADE-931E-4830-4AF9F9C983F3" referredColumn="DC83766C-770E-4636-4BDB-B98C3C140592"/>
+</associations>
+</Column>
+<Column name="ARTWORK_ARTIST_artist_code" id="7BC45B7A-BDE3-05F9-FCED-44B5C90DE2AF">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist code]]></commentInRDBMS>
+<generatorID>971B7EC2-DDE9-4782-5BA4-99F903969B4D</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="58B7D4E6-5ADE-931E-4830-4AF9F9C983F3" referredColumn="C6E7CFDD-E953-A154-2912-05B028203961"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E55A8B4D-AC21-D551-4D71-F427DF85C778" name="EXHIBIT_PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>B27E3564-5D31-6FF3-9E3F-7F18F4F63159</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1522DF8-3296-6A27-23EA-85D2A61A136F"/>
+<colUsage columnID="74239CEC-2EBA-B2C2-E741-440F9436C0BA"/>
+<colUsage columnID="7BC45B7A-BDE3-05F9-FCED-44B5C90DE2AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="226D0C0B-F4B0-BDB9-D31C-C2725A685225" name="EXHIBIT_ARTWORK_FK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>13FA42CC-8016-19CF-F0B9-B864B99231B6</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74239CEC-2EBA-B2C2-E741-440F9436C0BA"/>
+<colUsage columnID="7BC45B7A-BDE3-05F9-FCED-44B5C90DE2AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6CAE4A5B-9DCD-80AD-730F-756F243DFEC0" name="EXHIBIT_GALLERY_FK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>DB2CEFBA-8C71-1918-94EC-AA80F6173B58</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1522DF8-3296-6A27-23EA-85D2A61A136F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

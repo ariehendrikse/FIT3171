@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EA78377A-A208-046E-52B1-AB5AA705B6B5" name="ARTWORK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>572BA7FD-3A53-177B-5E70-1689D0B6DB85</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="art_id" id="DC83766C-770E-4636-4BDB-B98C3C140592">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[artowrk id]]></commentInRDBMS>
+<generatorID>6EDE8718-708E-21C4-1460-D6BC5EF0A933</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ARTIST_artist_code" id="C6E7CFDD-E953-A154-2912-05B028203961">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist code]]></commentInRDBMS>
+<generatorID>5ADE3D76-BD5B-5479-8660-65185C69AAEE</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7B95DECF-462B-B4A0-6A28-C1A8E790DBE2" referredColumn="69F30CDE-6F5F-552C-10A1-6EEE5416D4B9"/>
+</associations>
+</Column>
+<Column name="art_title" id="E95E81DA-36A0-0367-B9E8-76B0954D0913">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[title of the artwork ]]></commentInRDBMS>
+<generatorID>D9B3C653-6C4C-21C8-DA21-E11694652CE7</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="art_min_price" id="756D2984-8412-542E-3788-B162D40DD003">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[minimum sale price of the artwork]]></commentInRDBMS>
+<generatorID>2462BB33-9E7C-C632-B14C-75E79B98EEF3</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="art_media_desc" id="BC0628D9-701C-3B7C-3E53-3845AE53ABDA">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[media description of the artwork]]></commentInRDBMS>
+<generatorID>837A5038-B1AB-AAD3-6B59-42BB2AF115A0</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STYLE_style_name" id="EB0D924C-1CF9-916F-F9D3-10DEEE50E305">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[name of the style]]></commentInRDBMS>
+<generatorID>F48DC038-219B-980B-E0A5-4C0D8EA3C1AD</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C98EF9C7-A5F0-8A6C-1984-8B9D8C5D4A20" referredColumn="B9A65ED9-30DA-49D1-3D1B-DA86BD5BE283"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="87F336EE-8E09-A6EF-53EC-9C28994B1752" name="ARTWORK_PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>E8CE1BC7-688A-1D79-8F69-BA930DC99B75</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DC83766C-770E-4636-4BDB-B98C3C140592"/>
+<colUsage columnID="C6E7CFDD-E953-A154-2912-05B028203961"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E69511FA-F6D1-93F9-627D-9361A0CA0829" name="ARTWORK_STYLE_FK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>BCB74341-CF51-0987-E668-0E54EE36301E</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB0D924C-1CF9-916F-F9D3-10DEEE50E305"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27E5ABAC-6A50-6B26-88E2-F57DF048775A" name="ARTWORK_ARTIST_FK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<generatorID>5032EBFA-E5C3-B496-A1F3-E57D41A3DE2D</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6E7CFDD-E953-A154-2912-05B028203961"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

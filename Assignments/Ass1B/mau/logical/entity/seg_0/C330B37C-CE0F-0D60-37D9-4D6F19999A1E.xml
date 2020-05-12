@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="384E8A8B-73AE-74D6-03C7-E30CB46E8F5E" name="EXHIBIT">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C330B37C-CE0F-0D60-37D9-4D6F19999A1E" name="MOVEMENT">
 <createdBy>ariehendrikse</createdBy>
-<createdTime>2020-05-12 08:39:51 UTC</createdTime>
+<createdTime>2020-05-12 10:17:49 UTC</createdTime>
 <ownerDesignName>mau</ownerDesignName>
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
@@ -15,10 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="exh_start_date" id="991670D4-FDAC-CBD8-6E09-15017D833632">
+<Attribute name="move_date" id="3DAF7E4B-E729-1E9F-D95C-A044DDD251DE">
 <createdBy>ariehendrikse</createdBy>
-<createdTime>2020-05-12 08:40:06 UTC</createdTime>
-<commentInRDBMS><![CDATA[start date of exhibit]]></commentInRDBMS>
+<createdTime>2020-05-12 10:18:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[movement date ]]></commentInRDBMS>
 <ownerDesignName>mau</ownerDesignName>
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
@@ -28,41 +28,25 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="exh_end_date" id="86B1DD97-737E-57E1-957D-FC92E1A3434D">
+<Attribute name="art_status" id="047C22CA-E99B-0244-E296-67B525E993E5">
 <createdBy>ariehendrikse</createdBy>
-<createdTime>2020-05-12 08:40:19 UTC</createdTime>
-<commentInRDBMS><![CDATA[end date of exhibit]]></commentInRDBMS>
+<createdTime>2020-05-12 10:24:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[The status of the item]]></commentInRDBMS>
 <ownerDesignName>mau</ownerDesignName>
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>280 CHAR</dataTypeSize>
+<ownDataTypeParameters>280 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="gal_id" id="8A86B942-1D84-3BBC-5112-595BC83F34CB">
+<Attribute name="art_id" id="5E668F51-3D58-89D9-D6D0-9D489F31F97A">
 <createdBy>ariehendrikse</createdBy>
-<createdTime>2020-05-12 08:46:32 UTC</createdTime>
-<commentInRDBMS><![CDATA[gallery id]]></commentInRDBMS>
-<generatorID>DB2CEFBA-8C71-1918-94EC-AA80F6173B58</generatorID>
-<ownerDesignName>mau</ownerDesignName>
-<engineerTo>
-<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
-</engineerTo>
-<referedAttribute>6BA756E5-9428-4CA4-29C7-42B89FC62192</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="art_id" id="D6311E3A-1AC6-242A-0EC8-2AACC052346A">
-<createdBy>ariehendrikse</createdBy>
-<createdTime>2020-05-12 08:48:09 UTC</createdTime>
+<createdTime>2020-05-12 10:25:38 UTC</createdTime>
 <commentInRDBMS><![CDATA[artowrk id]]></commentInRDBMS>
-<generatorID>13FA42CC-8016-19CF-F0B9-B864B99231B6</generatorID>
+<generatorID>AAB0ED9E-7844-2838-6D18-80AAAD9538AF</generatorID>
 <ownerDesignName>mau</ownerDesignName>
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
@@ -74,11 +58,11 @@
 <dataTypePrecision>4</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="artist_code" id="971B7EC2-DDE9-4782-5BA4-99F903969B4D">
+<Attribute name="artist_code" id="A554CAF1-5981-672B-A45B-79B935C90EED">
 <createdBy>ariehendrikse</createdBy>
-<createdTime>2020-05-12 08:48:09 UTC</createdTime>
+<createdTime>2020-05-12 10:25:38 UTC</createdTime>
 <commentInRDBMS><![CDATA[artist code]]></commentInRDBMS>
-<generatorID>13FA42CC-8016-19CF-F0B9-B864B99231B6</generatorID>
+<generatorID>AAB0ED9E-7844-2838-6D18-80AAAD9538AF</generatorID>
 <ownerDesignName>mau</ownerDesignName>
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
@@ -90,40 +74,37 @@
 <dataTypePrecision>4</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="art_feat" id="643729C9-C724-7966-0B44-67C55C072F19">
+<Attribute name="gal_id" id="6B689D44-7D6F-45CE-B285-02B6057BDE37">
 <createdBy>ariehendrikse</createdBy>
-<createdTime>2020-05-12 10:26:00 UTC</createdTime>
-<commentInRDBMS><![CDATA[featured in catalog (yes/no)]]></commentInRDBMS>
+<createdTime>2020-05-12 10:35:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[gallery id]]></commentInRDBMS>
+<generatorID>326590A4-2432-CF63-DA46-E55DBAC3B845</generatorID>
 <ownerDesignName>mau</ownerDesignName>
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
-<constraintName>deat_bool_check</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>6BA756E5-9428-4CA4-29C7-42B89FC62192</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>3 CHAR</dataTypeSize>
-<listOfValues>
-<valueDef value="No" description=""/>
-<valueDef value="Yes" description=""/>
-</listOfValues>
-<defaultValue>No</defaultValue>
-<ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="B27E3564-5D31-6FF3-9E3F-7F18F4F63159" name="EXHIBIT PK">
+<identifier id="3A1D422A-5115-DF74-9AB0-5D99EC6AF8CE" name="MOVEMENT PK">
 <createdBy>ariehendrikse</createdBy>
-<createdTime>2020-05-12 08:47:02 UTC</createdTime>
+<createdTime>2020-05-12 10:22:17 UTC</createdTime>
 <ownerDesignName>mau</ownerDesignName>
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>8A86B942-1D84-3BBC-5112-595BC83F34CB</attributeRef>
-<attributeRef>D6311E3A-1AC6-242A-0EC8-2AACC052346A</attributeRef>
-<attributeRef>971B7EC2-DDE9-4782-5BA4-99F903969B4D</attributeRef>
+<attributeRef>3DAF7E4B-E729-1E9F-D95C-A044DDD251DE</attributeRef>
+<attributeRef>5E668F51-3D58-89D9-D6D0-9D489F31F97A</attributeRef>
+<attributeRef>A554CAF1-5981-672B-A45B-79B935C90EED</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

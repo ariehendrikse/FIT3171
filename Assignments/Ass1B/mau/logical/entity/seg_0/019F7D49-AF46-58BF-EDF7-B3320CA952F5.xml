@@ -27,6 +27,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="cust_id&gt;1000"/>
+</checkConstraint>
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cust_fname" id="07947708-951B-BF7D-43D9-60F59226DC3E">
@@ -96,8 +99,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 CHAR</dataTypeSize>
-<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>3 CHAR</dataTypeSize>
+<ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cust_ph" id="77F189A2-0DA8-7E49-DA12-7E9199714295">
 <createdBy>ariehendrikse</createdBy>
@@ -107,7 +110,6 @@
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>

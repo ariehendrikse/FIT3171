@@ -23,10 +23,14 @@
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
+<constraintName>chk_gal_thsnd</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="gal_id&gt;1000"/>
+</checkConstraint>
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="gal_name" id="DC4FDB2C-9290-2A3F-AD5D-2AA230D965E3">
@@ -50,7 +54,6 @@
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -68,8 +71,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 CHAR</dataTypeSize>
-<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>3 CHAR</dataTypeSize>
+<ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="gal_town" id="0C24FA0C-33CA-656D-6DC2-3895903981E8">
 <createdBy>ariehendrikse</createdBy>
@@ -126,6 +129,34 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>11</dataTypePrecision>
 <ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gal_opens" id="A5B080C5-29D3-4073-737C-8D6CCDFEE96E">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:22:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[time the gallery opens]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gal_closes" id="1C2CBAF2-ABF4-DE92-DD80-9A19E8F91C85">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:23:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[time the gallery close ]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
