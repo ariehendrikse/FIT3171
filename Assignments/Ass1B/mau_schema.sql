@@ -4,8 +4,23 @@
 --   type:      Oracle Database 11g
 -- Author: Arie Hendrikse
 -- Assignment 1B. Monash Art Union.
+
+-- Drop tables added to redo spool output
+drop table sale;
+drop table exhibit;
+drop table movement;
+drop table artwork;
+
+drop table customer;
+
+drop table gallery;
+drop table artist;
+drop table style;
+
+commit;
 set echo on
 spool mau_schema_output.txt
+
 
 CREATE TABLE artist (
     artist_code       NUMBER(4) NOT NULL,
@@ -52,7 +67,7 @@ CREATE TABLE artwork (
     art_date_added   DATE NOT NULL
 );
 
-ALTER TABLE artwork ADD CONSTRAINT chk_min_thousand CHECK ( art_id > 1000 );
+ALTER TABLE artwork ADD CONSTRAINT chk_min_thousand CHECK ( art_id > 0 );
 
 ALTER TABLE artwork ADD CONSTRAINT chk_min_pos CHECK ( art_min_price > 0 );
 
@@ -166,7 +181,7 @@ CREATE TABLE gallery (
     gal_closes      DATE
 );
 
-ALTER TABLE gallery ADD CONSTRAINT chk_gal_thsnd CHECK ( gal_id > 1000 );
+ALTER TABLE gallery ADD CONSTRAINT chk_gal_thsnd CHECK ( gal_id > 0 );
 
 COMMENT ON COLUMN gallery.gal_id IS
     'gallery id';
@@ -235,9 +250,7 @@ CREATE TABLE sale (
     artwork_artist_artist_code   NUMBER(4) NOT NULL
 );
 
-ALTER TABLE sale ADD CONSTRAINT chk_pos_gal_id CHECK ( gal_id > 0 );
 
-ALTER TABLE sale ADD CONSTRAINT chk_art_id_pos CHECK ( art_id > 0 );
 
 COMMENT ON COLUMN sale.sale_id IS
     'sale id';
