@@ -56,6 +56,70 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,8,2</ownDataTypeParameters>
 </Attribute>
+<Attribute name="cust_id" id="C66C90C2-746E-9941-4F14-1A56D488FEA9">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:58:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[customer id]]></commentInRDBMS>
+<generatorID>C9C07EC0-D038-3E94-68FE-7D8834FD2C6B</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<referedAttribute>ED1B6726-7D18-73E9-0E97-F05262F500F7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gal_id" id="70E1AF89-7659-7EE1-2F1D-9C28E8D672EF">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:11:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[gallery id]]></commentInRDBMS>
+<generatorID>8FE16FC2-E5C2-D00A-762C-9FABF18EA642</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<referedAttribute>8A86B942-1D84-3BBC-5112-595BC83F34CB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="art_id" id="6311DB2E-E27A-029D-6644-04A0DF3B2A61">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:11:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[artowrk id]]></commentInRDBMS>
+<generatorID>8FE16FC2-E5C2-D00A-762C-9FABF18EA642</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<referedAttribute>D6311E3A-1AC6-242A-0EC8-2AACC052346A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="artist_code" id="B4661FE8-FBDD-4145-EB1D-AB7C120D1A8F">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:11:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist code]]></commentInRDBMS>
+<generatorID>8FE16FC2-E5C2-D00A-762C-9FABF18EA642</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<referedAttribute>971B7EC2-DDE9-4782-5BA4-99F903969B4D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="04E0CA55-CD4E-3F21-9D68-BD3401044965" name="SALE PK">
