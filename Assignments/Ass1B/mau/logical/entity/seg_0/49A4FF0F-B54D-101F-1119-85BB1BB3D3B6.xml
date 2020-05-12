@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="49A4FF0F-B54D-101F-1119-85BB1BB3D3B6" name="STYLE">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:31:33 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="style_name" id="B90BBE35-2CC6-4305-CF2B-E1D29842DD3C">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:31:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[name of the style]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="26378022-F388-63E8-132A-716C66B49162" name="STYLE PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:31:44 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B90BBE35-2CC6-4305-CF2B-E1D29842DD3C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -99,6 +99,21 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="cust_ph" id="77F189A2-0DA8-7E49-DA12-7E9199714295">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:21:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[customer phone number]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="0BA2D839-E187-F96B-C34A-798FE39BD74F" name="CUSTOMER PK">

@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4C9FB0F1-D46F-34E1-FF13-4D76AF3AE601" name="SALE">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:30:13 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="sale_id" id="4AA70EF8-63EF-F9F1-8593-CEA465987FB5">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:30:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[sale id]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sale_date" id="9B0C83EF-C215-539E-8B27-BC35D7BD9072">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:30:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[date and time of the sale]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sale_price" id="AF3237D0-742C-3B41-BDB5-405CB7BFCBC5">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:51:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[price of the sale in dollars]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="04E0CA55-CD4E-3F21-9D68-BD3401044965" name="SALE PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:30:29 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4AA70EF8-63EF-F9F1-8593-CEA465987FB5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

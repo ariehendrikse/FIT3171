@@ -57,6 +57,76 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="gal_state" id="6D36C9D9-6C0B-26F0-1EDE-7441ABCD2676">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:27:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[state the gallery is located in]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gal_town" id="0C24FA0C-33CA-656D-6DC2-3895903981E8">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:27:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[town the gallery is located in]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gal_street" id="122D8722-BC94-3267-1E44-66D374626CE6">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:28:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[street address the gallery is located on]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gal_commision" id="E210C639-0295-84DB-4BB6-9747ABC55D48">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:29:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[percentage of commision the gallery takes]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gal_phone" id="CE84A5FE-5C4A-7CFD-2E90-237B5A6EA86D">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:29:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[gallery phone number]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="7645246A-DA59-103E-155C-B04204EEED83" name="GALLERY PK">

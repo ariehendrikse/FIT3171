@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="art_style" directorySegmentName="seg_0" id="BCB74341-CF51-0987-E668-0E54EE36301E">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:39:01 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<sourcePk>26378022-F388-63E8-132A-716C66B49162</sourcePk>
+<targetPk>E8CE1BC7-688A-1D79-8F69-BA930DC99B75</targetPk>
+<identifying>false</identifying>
+<nameOnTarget>styled as</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>49A4FF0F-B54D-101F-1119-85BB1BB3D3B6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>572BA7FD-3A53-177B-5E70-1689D0B6DB85</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

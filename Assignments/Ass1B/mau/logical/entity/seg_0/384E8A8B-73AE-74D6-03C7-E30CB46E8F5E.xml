@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="384E8A8B-73AE-74D6-03C7-E30CB46E8F5E" name="EXHIBIT">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:39:51 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="exh_start_date" id="991670D4-FDAC-CBD8-6E09-15017D833632">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:40:06 UTC</createdTime>
+<commentInRDBMS><![CDATA[start date of exhibit]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="exh_end_date" id="86B1DD97-737E-57E1-957D-FC92E1A3434D">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:40:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[end date of exhibit]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gal_id" id="8A86B942-1D84-3BBC-5112-595BC83F34CB">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:46:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[gallery id]]></commentInRDBMS>
+<generatorID>DB2CEFBA-8C71-1918-94EC-AA80F6173B58</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<referedAttribute>6BA756E5-9428-4CA4-29C7-42B89FC62192</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="art_id" id="D6311E3A-1AC6-242A-0EC8-2AACC052346A">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:48:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[artowrk id]]></commentInRDBMS>
+<generatorID>13FA42CC-8016-19CF-F0B9-B864B99231B6</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<referedAttribute>6EDE8718-708E-21C4-1460-D6BC5EF0A933</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="artist_code" id="971B7EC2-DDE9-4782-5BA4-99F903969B4D">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:48:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist code]]></commentInRDBMS>
+<generatorID>13FA42CC-8016-19CF-F0B9-B864B99231B6</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<referedAttribute>5ADE3D76-BD5B-5479-8660-65185C69AAEE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B27E3564-5D31-6FF3-9E3F-7F18F4F63159" name="EXHIBIT PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 08:47:02 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8A86B942-1D84-3BBC-5112-595BC83F34CB</attributeRef>
+<attributeRef>D6311E3A-1AC6-242A-0EC8-2AACC052346A</attributeRef>
+<attributeRef>971B7EC2-DDE9-4782-5BA4-99F903969B4D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
