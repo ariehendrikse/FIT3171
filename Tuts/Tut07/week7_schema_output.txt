@@ -43,7 +43,7 @@ SQL> create table enrolment
   6          enrol_semester  char(1) NOT NULL,
   7          enrol_mark      numeric(3),
   8          enrol_grade     char(2),
-  9          constraint enrol_pk PRIMARY KEY ( stu_nbr, unit_code ),
+  9          constraint enrol_pk PRIMARY KEY ( stu_nbr, unit_code,enrol_year ),
  10          constraint unit_fk foreign key ( unit_code )
  11              references unit ( unit_code ) on delete set null,
  12          constraint stu_fk foreign key ( stu_nbr )
@@ -87,7 +87,7 @@ SQL> INSERT INTO enrolment
   3      WITH names AS
   4           (SELECT 11111111,'FIT5132',2013,1 ,35,'N' FROM dual UNION ALL 
   5           SELECT 11111111, 'FIT5016',2013,1,61,'C' FROM dual UNION ALL 
-  6          SELECT 11111111, 'FIT5132',2013,2,42,'N' FROM dual UNION ALL 
+  6           SELECT 11111111, 'FIT5132',2013,2,42,'N' FROM dual UNION ALL 
   7           SELECT 11111111, 'FIT5111',2013,2,76,'D' FROM dual UNION ALL 
   8           SELECT 11111111, 'FIT5132',2014,2,NULL,NULL FROM dual UNION ALL 
   9           SELECT 11111111,'FIT5132',2013,2,83,'HD' FROM dual UNION ALL 
@@ -103,7 +103,7 @@ INSERT INTO enrolment
     WITH names AS
          (SELECT 11111111,'FIT5132',2013,1 ,35,'N' FROM dual UNION ALL 
          SELECT 11111111, 'FIT5016',2013,1,61,'C' FROM dual UNION ALL 
-        SELECT 11111111, 'FIT5132',2013,2,42,'N' FROM dual UNION ALL 
+         SELECT 11111111, 'FIT5132',2013,2,42,'N' FROM dual UNION ALL 
          SELECT 11111111, 'FIT5111',2013,2,76,'D' FROM dual UNION ALL 
          SELECT 11111111, 'FIT5132',2014,2,NULL,NULL FROM dual UNION ALL 
          SELECT 11111111,'FIT5132',2013,2,83,'HD' FROM dual UNION ALL 

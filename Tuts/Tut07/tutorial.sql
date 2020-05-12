@@ -31,7 +31,7 @@ create table enrolment
         enrol_semester  char(1) NOT NULL,
         enrol_mark      numeric(3),
         enrol_grade     char(2),
-        constraint enrol_pk PRIMARY KEY ( stu_nbr, unit_code ),
+        constraint enrol_pk PRIMARY KEY ( stu_nbr, unit_code,enrol_year ),
         constraint unit_fk foreign key ( unit_code )
             references unit ( unit_code ) on delete set null,
         constraint stu_fk foreign key ( stu_nbr )
