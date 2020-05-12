@@ -26,6 +26,24 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="style_name1" id="144E7A6E-BEC3-0635-246B-EE099C189130">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 09:22:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[name of the style]]></commentInRDBMS>
+<generatorID>4CF2746B-8D42-EE7A-4C6C-C0712A37856F</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>B90BBE35-2CC6-4305-CF2B-E1D29842DD3C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
