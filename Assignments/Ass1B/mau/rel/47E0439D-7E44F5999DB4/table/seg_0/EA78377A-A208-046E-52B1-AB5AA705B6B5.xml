@@ -14,10 +14,14 @@
 <commentInRDBMS><![CDATA[artowrk id]]></commentInRDBMS>
 <generatorID>6EDE8718-708E-21C4-1460-D6BC5EF0A933</generatorID>
 <ownerDesignName>mau</ownerDesignName>
+<constraintName>chk_min_thousand</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="art_id&gt;1000"/>
+</checkConstraint>
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -57,11 +61,15 @@
 <commentInRDBMS><![CDATA[minimum sale price of the artwork]]></commentInRDBMS>
 <generatorID>2462BB33-9E7C-C632-B14C-75E79B98EEF3</generatorID>
 <ownerDesignName>mau</ownerDesignName>
+<constraintName>chk_min_pos</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>8</dataTypePrecision>
 <dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="art_min_price&gt;0"/>
+</checkConstraint>
 <ownDataTypeParameters>,8,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -95,6 +103,18 @@
 <associations>
 <colAssociation fkAssociation="C98EF9C7-A5F0-8A6C-1984-8B9D8C5D4A20" referredColumn="B9A65ED9-30DA-49D1-3D1B-DA86BD5BE283"/>
 </associations>
+</Column>
+<Column name="art_date_added" id="4E4B2151-220E-CA71-9F7D-40D2F6D0A807">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date the artwork was added to the mau]]></commentInRDBMS>
+<generatorID>C06F564C-4FCA-238C-D45B-94608FBAF157</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

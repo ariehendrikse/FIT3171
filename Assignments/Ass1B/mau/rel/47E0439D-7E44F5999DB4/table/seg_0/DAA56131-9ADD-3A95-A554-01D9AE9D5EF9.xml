@@ -14,10 +14,14 @@
 <commentInRDBMS><![CDATA[gallery id]]></commentInRDBMS>
 <generatorID>6BA756E5-9428-4CA4-29C7-42B89FC62192</generatorID>
 <ownerDesignName>mau</ownerDesignName>
+<constraintName>chk_gal_thsnd</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="gal_id&gt;1000"/>
+</checkConstraint>
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -55,8 +59,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 CHAR</dataTypeSize>
-<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<dataTypeSize>3 CHAR</dataTypeSize>
+<ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="gal_town" id="356708B9-29C2-19B8-71C5-762A1851A7F4">
@@ -109,6 +113,32 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>11</dataTypePrecision>
 <ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_opens" id="69FD4EE5-A9F1-3B28-C8DA-1D6605D593B2">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[time the gallery opens]]></commentInRDBMS>
+<generatorID>A5B080C5-29D3-4073-737C-8D6CCDFEE96E</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gal_closes" id="2AB88C86-3B02-9B0C-5EE8-D26972813014">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[time the gallery close ]]></commentInRDBMS>
+<generatorID>1C2CBAF2-ABF4-DE92-DD80-9A19E8F91C85</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

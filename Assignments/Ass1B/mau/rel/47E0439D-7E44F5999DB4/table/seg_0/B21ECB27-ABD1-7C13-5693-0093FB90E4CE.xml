@@ -26,6 +26,7 @@
 <commentInRDBMS><![CDATA[end date of exhibit]]></commentInRDBMS>
 <generatorID>86B1DD97-737E-57E1-957D-FC92E1A3434D</generatorID>
 <ownerDesignName>mau</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -82,6 +83,25 @@
 <associations>
 <colAssociation fkAssociation="58B7D4E6-5ADE-931E-4830-4AF9F9C983F3" referredColumn="C6E7CFDD-E953-A154-2912-05B028203961"/>
 </associations>
+</Column>
+<Column name="art_feat" id="D18897D4-C6E2-BA28-5497-93351823647F">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[featured in catalog (yes/no)]]></commentInRDBMS>
+<generatorID>643729C9-C724-7966-0B44-67C55C072F19</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<constraintName>deat_bool_check</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="No" description=""/>
+<valueDef value="Yes" description=""/>
+</listOfValues>
+<defaultValue>No</defaultValue>
+<ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

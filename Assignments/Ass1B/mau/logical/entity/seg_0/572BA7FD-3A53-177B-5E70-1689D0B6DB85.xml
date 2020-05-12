@@ -113,14 +113,28 @@
 <dataTypeSize>50 CHAR</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="art_date_added" id="C06F564C-4FCA-238C-D45B-94608FBAF157">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:48:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date the artwork was added to the mau]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="E8CE1BC7-688A-1D79-8F69-BA930DC99B75" name="ARTWORK PK">
 <createdBy>ariehendrikse</createdBy>
 <createdTime>2020-05-12 03:51:40 UTC</createdTime>
 <ownerDesignName>mau</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

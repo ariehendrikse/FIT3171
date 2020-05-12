@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5B12D0F8-49AD-D064-CE54-505D7C05511E" name="MOVEMENT">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<generatorID>C330B37C-CE0F-0D60-37D9-4D6F19999A1E</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="move_date" id="9C34B719-C444-167A-3C0E-9AB5B28D791A">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[movement date ]]></commentInRDBMS>
+<generatorID>3DAF7E4B-E729-1E9F-D95C-A044DDD251DE</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="art_status" id="C3C71BD7-141C-14B6-6872-09409719CFCC">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[The status of the item]]></commentInRDBMS>
+<generatorID>047C22CA-E99B-0244-E296-67B525E993E5</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>280 CHAR</dataTypeSize>
+<ownDataTypeParameters>280 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ARTWORK_art_id" id="A8F95643-FCF9-5947-C588-6159214CC725">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[artowrk id]]></commentInRDBMS>
+<generatorID>5E668F51-3D58-89D9-D6D0-9D489F31F97A</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0E6637C0-D144-19F2-3234-78145A29E298" referredColumn="DC83766C-770E-4636-4BDB-B98C3C140592"/>
+</associations>
+</Column>
+<Column name="ARTWORK_ARTIST_artist_code" id="216A5EFD-3A43-997C-8862-4E760E588543">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist code]]></commentInRDBMS>
+<generatorID>A554CAF1-5981-672B-A45B-79B935C90EED</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0E6637C0-D144-19F2-3234-78145A29E298" referredColumn="C6E7CFDD-E953-A154-2912-05B028203961"/>
+</associations>
+</Column>
+<Column name="GALLERY_gal_id" id="CA2892A8-B80D-6964-67E9-1594E8B26F80">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[gallery id]]></commentInRDBMS>
+<generatorID>6B689D44-7D6F-45CE-B285-02B6057BDE37</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="53370C69-90F2-92F5-C0A8-EE25C4A10806" referredColumn="2D25E704-F49A-4DF6-AB72-18F4CADEB5D6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3F4885A1-606F-9E59-EF12-01FE6C76ED6B" name="MOVEMENT_PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<generatorID>3A1D422A-5115-DF74-9AB0-5D99EC6AF8CE</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9C34B719-C444-167A-3C0E-9AB5B28D791A"/>
+<colUsage columnID="A8F95643-FCF9-5947-C588-6159214CC725"/>
+<colUsage columnID="216A5EFD-3A43-997C-8862-4E760E588543"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB3DD652-198D-BA0F-54CE-2A8E0DACD911" name="MOVEMENT_ARTWORK_FK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<generatorID>AAB0ED9E-7844-2838-6D18-80AAAD9538AF</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A8F95643-FCF9-5947-C588-6159214CC725"/>
+<colUsage columnID="216A5EFD-3A43-997C-8862-4E760E588543"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E2DD9F4F-B045-00F2-1734-C4694AB10506" name="MOVEMENT_GALLERY_FK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 10:49:10 UTC</createdTime>
+<generatorID>326590A4-2432-CF63-DA46-E55DBAC3B845</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA2892A8-B80D-6964-67E9-1594E8B26F80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
