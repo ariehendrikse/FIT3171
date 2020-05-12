@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="mau" id="D5582A90-7A1D-5BCA-4107-2F0409224BB2" version="3.5">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:26:29 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>D5582A90-7A1D-5BCA-4107-2F0409224BB2</designId>
+</OSDM_Design>

@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="745CD25A-8C2B-7537-4491-780E6D455B73" name="ARTIST">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:28:12 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="artist_code" id="136F8281-7F3F-7A26-952D-15CCFE206368">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:32:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist code]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="artist_fname" id="16863F4F-D802-B071-A2B2-4D604BFEB10E">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:33:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist first name]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="artist_lname" id="BC5C52A9-3111-0E74-A3BF-5602152DF8E0">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:33:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist last name]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="artist_no_works" id="293426E1-5232-6825-0644-2953FCA835DC">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:34:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[number of artist artowrks created]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="artist_street" id="CB61CB3B-C6E7-47B2-A38D-FC5EDB3AAE49">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:38:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist street of his address]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="artist_town" id="D5750B84-FB16-E316-18DA-383BDA4F28F2">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:39:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[town of artist's address]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="artist_state" id="10DD882D-2214-D79E-841E-A66A7DF8FF9F">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:40:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[the state from the artists address]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FEA70B07-1402-0BCA-C7EE-AD1670D634EC" name="ARTIST PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:54:26 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>136F8281-7F3F-7A26-952D-15CCFE206368</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

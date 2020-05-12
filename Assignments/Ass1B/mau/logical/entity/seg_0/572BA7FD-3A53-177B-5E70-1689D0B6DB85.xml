@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="572BA7FD-3A53-177B-5E70-1689D0B6DB85" name="ARTWORK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:51:21 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="art_id" id="6EDE8718-708E-21C4-1460-D6BC5EF0A933">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:51:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[artowrk id]]></commentInRDBMS>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="artist_code" id="5ADE3D76-BD5B-5479-8660-65185C69AAEE">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:55:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist code]]></commentInRDBMS>
+<generatorID>5032EBFA-E5C3-B496-A1F3-E57D41A3DE2D</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<referedAttribute>136F8281-7F3F-7A26-952D-15CCFE206368</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E8CE1BC7-688A-1D79-8F69-BA930DC99B75" name="ARTWORK PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-12 03:51:40 UTC</createdTime>
+<ownerDesignName>mau</ownerDesignName>
+<engineerTo>
+<item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6EDE8718-708E-21C4-1460-D6BC5EF0A933</attributeRef>
+<attributeRef>5ADE3D76-BD5B-5479-8660-65185C69AAEE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
