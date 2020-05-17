@@ -91,48 +91,24 @@ SQL>
 SQL> /* B5. List the unit code and unit name of the pre-requisite units of 
 SQL>      'Advanced Data Management' unit */
 SQL> SELECT 
-  2      UNITCODE,
-  3      UNITNAME
+  2      UNIT.UNITCODE,
+  3      UNIT.UNITNAME
   4  FROM 
   5      (
   6      SELECT
   7          *
   8      FROM 
-  9          UNI.PREREQ, JOIN UNI.UNIT ON PREREQ.UNITCODE=UNIT.UNITCODE
+  9          UNI.PREREQ JOIN UNI.UNIT ON PREREQ.UNITCODE=UNIT.UNITCODE
  10      WHERE UNIT.UNITNAME='Advanced Data Management'
  11  
- 12      ) AS U
- 13      JOIN UNI.UNIT WHERE 
+ 12      )
+ 13      JOIN UNI.UNIT ON HAS_PREREQ_OF = UNIT.UNITCODE
  14  ;
 
-Error starting at line : 49 in command -
-SELECT 
-    UNITCODE,
-    UNITNAME
-FROM 
-    (
-    SELECT
-        *
-    FROM 
-        UNI.PREREQ, JOIN UNI.UNIT ON PREREQ.UNITCODE=UNIT.UNITCODE
-    WHERE UNIT.UNITNAME='Advanced Data Management'
-
-    ) AS U
-    JOIN UNI.UNIT WHERE 
-
-Error at Command Line : 57 Column : 29
-Error report -
-SQL Error: ORA-00907: missing right parenthesis
-00907. 00000 -  "missing right parenthesis"
-*Cause:    
-*Action:
-SQL> 
-SQL> WHERE UNITNAME='Advanced Data Management' JOIN UNI.UNIT WHERE PREREQ.HAS_PREREQ_OF=U.UNITCODE;
-
-Error starting at line : 64 in command -
-WHERE UNITNAME='Advanced Data Management' JOIN UNI.UNIT WHERE PREREQ.HAS_PREREQ_OF=U.UNITCODE
-Error report -
-Unknown Command
+UNITCOD UNITNAME                                                                                            
+------- ----------------------------------------------------------------------------------------------------
+FIT1004 Introduction to Data Management                                                                     
+FIT1040 Programming Fundamental                                                                             
 
 SQL> 
 SQL> 

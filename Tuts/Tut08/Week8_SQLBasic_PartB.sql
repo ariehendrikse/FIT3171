@@ -47,21 +47,19 @@ WHERE STUDENT.STUDFNAME = 'Mary' and STUDENT.STUDLNAME = 'Smith';
 /* B5. List the unit code and unit name of the pre-requisite units of 
       'Advanced Data Management' unit */
 SELECT 
-    UNITCODE,
-    UNITNAME
+    UNIT.UNITCODE,
+    UNIT.UNITNAME
 FROM 
     (
     SELECT
         *
     FROM 
-        UNI.PREREQ, JOIN UNI.UNIT ON PREREQ.UNITCODE=UNIT.UNITCODE
+        UNI.PREREQ JOIN UNI.UNIT ON PREREQ.UNITCODE=UNIT.UNITCODE
     WHERE UNIT.UNITNAME='Advanced Data Management'
     
-    ) AS U
-    JOIN UNI.UNIT WHERE 
+    )
+    JOIN UNI.UNIT ON HAS_PREREQ_OF = UNIT.UNITCODE
     ;
-
-WHERE UNITNAME='Advanced Data Management' JOIN UNI.UNIT WHERE PREREQ.HAS_PREREQ_OF=U.UNITCODE;
 
 
 /* B6. Find all students (list their id, firstname and surname) who 
