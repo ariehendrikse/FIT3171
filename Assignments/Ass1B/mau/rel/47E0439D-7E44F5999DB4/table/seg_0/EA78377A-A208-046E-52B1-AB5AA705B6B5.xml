@@ -14,13 +14,13 @@
 <commentInRDBMS><![CDATA[artowrk id]]></commentInRDBMS>
 <generatorID>6EDE8718-708E-21C4-1460-D6BC5EF0A933</generatorID>
 <ownerDesignName>mau</ownerDesignName>
-<constraintName>chk_min_thousand</constraintName>
+<constraintName>chk_art_id_pos</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
 <checkConstraint>
-<implementationDef dbType="Oracle Database 11g" definition="art_id&gt;1000"/>
+<implementationDef dbType="Oracle Database 11g" definition="art_id&gt;0"/>
 </checkConstraint>
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>

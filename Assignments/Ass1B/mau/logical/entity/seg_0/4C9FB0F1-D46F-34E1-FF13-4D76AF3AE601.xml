@@ -23,22 +23,27 @@
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
+<constraintName>chk_sale_id_len</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="sale_id&gt;999999"/>
+</checkConstraint>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="sale_date" id="9B0C83EF-C215-539E-8B27-BC35D7BD9072">
 <createdBy>ariehendrikse</createdBy>
 <createdTime>2020-05-12 08:30:51 UTC</createdTime>
-<commentInRDBMS><![CDATA[date and time of the sale]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[date of the sale]]></commentInRDBMS>
 <ownerDesignName>mau</ownerDesignName>
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="sale_price" id="AF3237D0-742C-3B41-BDB5-405CB7BFCBC5">
@@ -81,15 +86,11 @@
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
-<constraintName>chk_pos_gal_id</constraintName>
 <referedAttribute>8A86B942-1D84-3BBC-5112-595BC83F34CB</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<checkConstraint>
-<implementationDef dbType="Oracle Database 11g" definition="gal_id&gt;0"/>
-</checkConstraint>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="art_id" id="6311DB2E-E27A-029D-6644-04A0DF3B2A61">
@@ -101,15 +102,11 @@
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
 </engineerTo>
-<constraintName>chk_art_id_pos</constraintName>
 <referedAttribute>D6311E3A-1AC6-242A-0EC8-2AACC052346A</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<checkConstraint>
-<implementationDef dbType="Oracle Database 11g" definition="art_id&gt;0"/>
-</checkConstraint>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="artist_code" id="B4661FE8-FBDD-4145-EB1D-AB7C120D1A8F">

@@ -67,7 +67,7 @@
 <colAssociation fkAssociation="58B7D4E6-5ADE-931E-4830-4AF9F9C983F3" referredColumn="DC83766C-770E-4636-4BDB-B98C3C140592"/>
 </associations>
 </Column>
-<Column name="ARTIST_artist_code" id="7BC45B7A-BDE3-05F9-FCED-44B5C90DE2AF">
+<Column name="artist_code" id="7BC45B7A-BDE3-05F9-FCED-44B5C90DE2AF">
 <createdBy>ariehendrikse</createdBy>
 <createdTime>2020-05-12 09:34:50 UTC</createdTime>
 <commentInRDBMS><![CDATA[artist code]]></commentInRDBMS>

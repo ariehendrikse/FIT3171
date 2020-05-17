@@ -10,7 +10,7 @@
 <keyObject>E55A8B4D-AC21-D551-4D71-F427DF85C778</keyObject>
 <referredKeyID>E55A8B4D-AC21-D551-4D71-F427DF85C778</referredKeyID>
 <mandatory>true</mandatory>
-<refColNames>gal_id,art_id,ARTIST_artist_code</refColNames>
+<refColNames>gal_id,art_id,artist_code</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>
 <columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>

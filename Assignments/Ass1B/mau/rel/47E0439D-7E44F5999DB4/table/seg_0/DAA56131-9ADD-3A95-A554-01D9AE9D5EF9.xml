@@ -14,13 +14,13 @@
 <commentInRDBMS><![CDATA[gallery id]]></commentInRDBMS>
 <generatorID>6BA756E5-9428-4CA4-29C7-42B89FC62192</generatorID>
 <ownerDesignName>mau</ownerDesignName>
-<constraintName>chk_gal_thsnd</constraintName>
+<constraintName>chk_gal_id_pos</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
 <checkConstraint>
-<implementationDef dbType="Oracle Database 11g" definition="gal_id&gt;1000"/>
+<implementationDef dbType="Oracle Database 11g" definition="gal_id&gt;0"/>
 </checkConstraint>
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -28,6 +28,7 @@
 <Column name="gal_name" id="8F54B8C7-57E0-66C6-3028-DC566A9F5E4D">
 <createdBy>ariehendrikse</createdBy>
 <createdTime>2020-05-12 09:34:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[gallery name]]></commentInRDBMS>
 <generatorID>DC4FDB2C-9290-2A3F-AD5D-2AA230D965E3</generatorID>
 <ownerDesignName>mau</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -40,7 +41,7 @@
 <Column name="gal_manager" id="BAABC7F7-6B26-E8FD-84C0-11740948B4E3">
 <createdBy>ariehendrikse</createdBy>
 <createdTime>2020-05-12 09:34:50 UTC</createdTime>
-<commentInRDBMS><![CDATA[gal_opens]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[the manager of the gallery]]></commentInRDBMS>
 <generatorID>3B5D888A-9619-D80A-1342-177E861D53C5</generatorID>
 <ownerDesignName>mau</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>

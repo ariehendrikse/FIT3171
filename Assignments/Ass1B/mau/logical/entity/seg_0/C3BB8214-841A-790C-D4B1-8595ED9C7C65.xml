@@ -36,6 +36,7 @@
 <Attribute name="gal_name" id="DC4FDB2C-9290-2A3F-AD5D-2AA230D965E3">
 <createdBy>ariehendrikse</createdBy>
 <createdTime>2020-05-12 04:04:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[gallery name]]></commentInRDBMS>
 <ownerDesignName>mau</ownerDesignName>
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>
@@ -49,7 +50,7 @@
 <Attribute name="gal_manager" id="3B5D888A-9619-D80A-1342-177E861D53C5">
 <createdBy>ariehendrikse</createdBy>
 <createdTime>2020-05-12 04:04:22 UTC</createdTime>
-<commentInRDBMS><![CDATA[gal_opens]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[the manager of the gallery]]></commentInRDBMS>
 <ownerDesignName>mau</ownerDesignName>
 <engineerTo>
 <item key="47E0439D-791F-ABA7-DD04-7E44F5999DB4" value="true"/>

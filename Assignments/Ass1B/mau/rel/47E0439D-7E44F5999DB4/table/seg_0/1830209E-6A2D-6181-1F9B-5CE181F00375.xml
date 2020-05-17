@@ -14,16 +14,21 @@
 <commentInRDBMS><![CDATA[sale id]]></commentInRDBMS>
 <generatorID>4AA70EF8-63EF-F9F1-8593-CEA465987FB5</generatorID>
 <ownerDesignName>mau</ownerDesignName>
+<constraintName>chk_sale_id_len</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 11g" definition="sale_id&gt;999999"/>
+</checkConstraint>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="sale_date" id="84E2D900-D528-4D5B-6E2D-A66F9E01B5AB">
 <createdBy>ariehendrikse</createdBy>
 <createdTime>2020-05-12 09:34:50 UTC</createdTime>
-<commentInRDBMS><![CDATA[date and time of the sale]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[date of the sale]]></commentInRDBMS>
 <generatorID>9B0C83EF-C215-539E-8B27-BC35D7BD9072</generatorID>
 <ownerDesignName>mau</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -63,20 +68,16 @@
 <colAssociation fkAssociation="60698669-EA27-2248-C8C4-BBE362547A2F" referredColumn="CA6C110F-266C-4C13-D0EC-B1D6E6AE8852"/>
 </associations>
 </Column>
-<Column name="GALLERY_gal_id" id="DB5D99F8-2CCC-8649-9687-C1D6C0DB6320">
+<Column name="gal_id" id="DB5D99F8-2CCC-8649-9687-C1D6C0DB6320">
 <createdBy>ariehendrikse</createdBy>
 <createdTime>2020-05-12 09:34:50 UTC</createdTime>
 <commentInRDBMS><![CDATA[gallery id]]></commentInRDBMS>
 <generatorID>70E1AF89-7659-7EE1-2F1D-9C28E8D672EF</generatorID>
 <ownerDesignName>mau</ownerDesignName>
-<constraintName>chk_pos_gal_id</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<checkConstraint>
-<implementationDef dbType="Oracle Database 11g" definition="gal_id&gt;0"/>
-</checkConstraint>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -84,20 +85,16 @@
 <colAssociation fkAssociation="C3A892D3-37B5-7685-3980-E7775D69107C" referredColumn="B1522DF8-3296-6A27-23EA-85D2A61A136F"/>
 </associations>
 </Column>
-<Column name="ARTWORK_art_id" id="17D62CA0-4445-3C5D-4CE0-BC2143810069">
+<Column name="art_id" id="17D62CA0-4445-3C5D-4CE0-BC2143810069">
 <createdBy>ariehendrikse</createdBy>
 <createdTime>2020-05-12 09:34:50 UTC</createdTime>
 <commentInRDBMS><![CDATA[artowrk id]]></commentInRDBMS>
 <generatorID>6311DB2E-E27A-029D-6644-04A0DF3B2A61</generatorID>
 <ownerDesignName>mau</ownerDesignName>
-<constraintName>chk_art_id_pos</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<checkConstraint>
-<implementationDef dbType="Oracle Database 11g" definition="art_id&gt;0"/>
-</checkConstraint>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -105,7 +102,7 @@
 <colAssociation fkAssociation="C3A892D3-37B5-7685-3980-E7775D69107C" referredColumn="74239CEC-2EBA-B2C2-E741-440F9436C0BA"/>
 </associations>
 </Column>
-<Column name="ARTWORK_ARTIST_artist_code" id="9BEA0C5B-14E2-5588-293B-DDD81E7A043A">
+<Column name="artist_code" id="9BEA0C5B-14E2-5588-293B-DDD81E7A043A">
 <createdBy>ariehendrikse</createdBy>
 <createdTime>2020-05-12 09:34:50 UTC</createdTime>
 <commentInRDBMS><![CDATA[artist code]]></commentInRDBMS>

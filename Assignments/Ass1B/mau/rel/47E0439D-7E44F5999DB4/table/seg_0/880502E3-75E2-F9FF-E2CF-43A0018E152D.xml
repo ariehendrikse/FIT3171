@@ -102,6 +102,19 @@
 <ownDataTypeParameters>3 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="artist_ph" id="1F91B704-85EA-5824-0F32-156E59369AAD">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-05-13 00:47:54 UTC</createdTime>
+<commentInRDBMS><![CDATA[artist phone number]]></commentInRDBMS>
+<generatorID>97408DE7-0D4E-753E-5984-2193EB4C5319</generatorID>
+<ownerDesignName>mau</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="385397DB-868D-6856-1830-9C30A97367B7" name="ARTIST_PK">
