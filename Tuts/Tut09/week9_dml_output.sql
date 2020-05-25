@@ -1,4 +1,4 @@
-spool week7_schema_output.txt
+spool week9_schema_output.txt
 set echo on
 
 
