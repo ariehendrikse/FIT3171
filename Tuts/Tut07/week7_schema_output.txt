@@ -1,3 +1,26 @@
+SQL> 
+SQL> /*
+SQL>Databases Week 7 Tutorial Sample Solution
+SQL>week7_schema.sql
+SQL>
+SQL>Databases Units
+SQL>Author: FIT Database Teaching Team
+SQL>License: Copyright © Monash University, unless otherwise stated. All Rights Reserved.
+SQL>COPYRIGHT WARNING
+SQL>Warning
+SQL>This material is protected by copyright. For use within Monash University only. NOT FOR RESALE.
+SQL>Do not remove this notice. 
+SQL>*/
+SQL> 
+SQL> 
+SQL> -- 7.1
+SQL> -- DDL for Student-Unit-Enrolment model
+SQL> --
+SQL> 
+SQL> --
+SQL> -- Place DROP commands at head of schema file
+SQL> --
+SQL> 
 SQL> drop table enrolment purge;
 
 Table ENROLMENT dropped.
@@ -11,128 +34,46 @@ SQL> drop table unit purge;
 Table UNIT dropped.
 
 SQL> 
-SQL> 
-SQL> create table student
-  2      (
-  3          stu_nbr     numeric(8),
-  4          stu_lname   varchar(50) NOT NULL,
-  5          stu_fname   varchar(50) NOT NULL,
-  6          stu_dob     date NOT NULL,
-  7          CONSTRAINT min_stu_nbr CHECK (stu_nbr >= 1000000),
-  8          CONSTRAINT student_pk PRIMARY KEY ( stu_nbr )
-  9      )   ;
+SQL> -- Create Tables
+SQL> -- Here using both table and column constraints
+SQL> --
+SQL> create table student (
+  2    stu_nbr number(8) not null,
+  3    stu_lname varchar2(50) not null,
+  4    stu_fname varchar2(50) not null,
+  5    stu_dob date not null,
+  6      constraint pk_student primary key (stu_nbr),
+  7      constraint ck_stu_nbr check (stu_nbr > 10000000));
 
 Table STUDENT created.
 
 SQL> 
-SQL> create table unit
-  2      (
-  3          unit_code char(7) not null,
-  4          unit_name varchar(50) not null,
-  5          constraint unit_pk PRIMARY KEY ( unit_code )
-  6      )   ;
+SQL> create table unit (
+  2    unit_code char(7) not null,
+  3    unit_name varchar2(50) not null constraint uq_unit_name unique,
+  4      constraint pk_unit primary key (unit_code));
 
 Table UNIT created.
 
 SQL> 
-SQL> create table enrolment
-  2      (
-  3          stu_nbr         numeric(8) NOT NULL,
-  4          unit_code       char(7) NOT NULL,
-  5          enrol_year      numeric(4) NOT NULL,
-  6          enrol_semester  char(1) NOT NULL,
-  7          enrol_mark      numeric(3),
-  8          enrol_grade     char(2),
-  9          constraint enrol_pk PRIMARY KEY ( stu_nbr, unit_code,enrol_year ),
- 10          constraint unit_fk foreign key ( unit_code )
- 11              references unit ( unit_code ) on delete set null,
- 12          constraint stu_fk foreign key ( stu_nbr )
- 13              references student ( stu_nbr ) on delete set null
- 14      )   ;
+SQL> create table enrolment (
+  2    stu_nbr number(8) not null,
+  3    unit_code char(7) not null,
+  4    enrol_year number(4) not null,
+  5    enrol_semester char(1) not null,
+  6    enrol_mark number(3), 
+  7    enrol_grade char(3),
+  8      constraint pk_enrolment primary key (stu_nbr, unit_code, enrol_year, enrol_semester),
+  9      constraint enrol_sem_value check (enrol_semester in ('1', '2', '3')),
+ 10      constraint fk_enrolment_student foreign key (stu_nbr)
+ 11        references student (stu_nbr),
+ 12      constraint fk_enrolment_unit foreign key (unit_code)
+ 13        references unit (unit_code));
 
 Table ENROLMENT created.
-
-SQL> INSERT INTO student 
-  2      (
-  3          stu_nbr, stu_lname, stu_fname, stu_dob
-  4      )
-  5      WITH names AS
-  6          (SELECT 11111111, 'Bloggs', 'Fred', '1-Jan-90' FROM dual UNION ALL 
-  7          SELECT 11111112, 'Nice', 'Nick', '10-Oct-94' FROM dual UNION ALL 
-  8          SELECT 11111113, 'Wheat', 'Wendy', '5-May-90' FROM dual UNION ALL
-  9          SELECT 11111114, 'Sheen', 'Cindy', '25-Dec-96' FROM dual)
- 10      SELECT * FROM names
- 11  ;
-
-4 rows inserted.
-
-SQL> 
-SQL> INSERT INTO unit 
-  2      (
-  3           unit_code,unit_name
-  4      )
-  5      WITH names AS
-  6          (SELECT 'FIT9999','FIT Last Unit' FROM dual UNION ALL 
-  7          SELECT 'FIT5132','Introduction to Databases' FROM dual UNION ALL 
-  8          SELECT 'FIT5016','Project' FROM dual UNION ALL 
-  9          SELECT 'FIT5111','Students Life' FROM dual)
- 10      SELECT * FROM names
- 11  ;
-
-4 rows inserted.
-
-SQL> 
-SQL> INSERT INTO enrolment
-  2         (stu_nbr ,unit_code,enrol_year,enrol_semester,enrol_mark,enrol_grade)
-  3      WITH names AS
-  4           (SELECT 11111111,'FIT5132',2013,1 ,35,'N' FROM dual UNION ALL 
-  5           SELECT 11111111, 'FIT5016',2013,1,61,'C' FROM dual UNION ALL 
-  6           SELECT 11111111, 'FIT5132',2013,2,42,'N' FROM dual UNION ALL 
-  7           SELECT 11111111, 'FIT5111',2013,2,76,'D' FROM dual UNION ALL 
-  8           SELECT 11111111, 'FIT5132',2014,2,NULL,NULL FROM dual UNION ALL 
-  9           SELECT 11111111,'FIT5132',2013,2,83,'HD' FROM dual UNION ALL 
- 10           SELECT 11111112,'FIT5111',2013,2,79,'D' FROM dual UNION ALL 
- 11           SELECT 11111113,'FIT5132',2014,2,NULL,NULL FROM dual UNION ALL 
- 12           SELECT 11111113,'FIT5111',2014,2,NULL,NULL FROM dual UNION ALL 
- 13           SELECT 11111114,'FIT5111',2014,2,NULL,NULL FROM dual)
- 14           SELECT * FROM names;
-
-Error starting at line : 64 in command -
-INSERT INTO enrolment
-       (stu_nbr ,unit_code,enrol_year,enrol_semester,enrol_mark,enrol_grade)
-    WITH names AS
-         (SELECT 11111111,'FIT5132',2013,1 ,35,'N' FROM dual UNION ALL 
-         SELECT 11111111, 'FIT5016',2013,1,61,'C' FROM dual UNION ALL 
-         SELECT 11111111, 'FIT5132',2013,2,42,'N' FROM dual UNION ALL 
-         SELECT 11111111, 'FIT5111',2013,2,76,'D' FROM dual UNION ALL 
-         SELECT 11111111, 'FIT5132',2014,2,NULL,NULL FROM dual UNION ALL 
-         SELECT 11111111,'FIT5132',2013,2,83,'HD' FROM dual UNION ALL 
-         SELECT 11111112,'FIT5111',2013,2,79,'D' FROM dual UNION ALL 
-         SELECT 11111113,'FIT5132',2014,2,NULL,NULL FROM dual UNION ALL 
-         SELECT 11111113,'FIT5111',2014,2,NULL,NULL FROM dual UNION ALL 
-         SELECT 11111114,'FIT5111',2014,2,NULL,NULL FROM dual)
-         SELECT * FROM names
-Error report -
-ORA-00001: unique constraint (AHEN0012.ENROL_PK) violated
-
-SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> 
-SQL> SELECT * FROM student;
-
-   STU_NBR STU_LNAME                                          STU_FNAME                                          STU_DOB  
----------- -------------------------------------------------- -------------------------------------------------- ---------
-  11111111 Bloggs                                             Fred                                               01/JAN/90
-  11111112 Nice                                               Nick                                               10/OCT/94
-  11111113 Wheat                                              Wendy                                              05/MAY/90
-  11111114 Sheen                                              Cindy                                              25/DEC/96
 
 SQL> commit;
 
 Commit complete.
 
-SQL> spool off
+SQL> set echo off

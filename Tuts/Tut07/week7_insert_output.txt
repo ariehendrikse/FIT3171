@@ -1,0 +1,302 @@
+SQL> 
+SQL> /*
+SQL>Databases Week 7 Tutorial Sample Solution
+SQL>week7_insert.sql
+SQL>
+SQL>Databases Units
+SQL>Author: FIT Database Teaching Team
+SQL>License: Copyright © Monash University, unless otherwise stated. All Rights Reserved.
+SQL>COPYRIGHT WARNING
+SQL>Warning
+SQL>This material is protected by copyright. For use within Monash University only. NOT FOR RESALE.
+SQL>Do not remove this notice. 
+SQL>*/
+SQL> 
+SQL> 
+SQL> -- 7.3.1
+SQL> -- Basic INSERT statement
+SQL> -- ================================================================
+SQL> insert into student values (11111111,'Bloggs','Fred','01-Jan-1990');
+
+1 row inserted.
+
+SQL> insert into student values (11111112,'Nice','Nick','10-Oct-1994');
+
+1 row inserted.
+
+SQL> insert into student values (11111113,'Wheat','Wendy','05-May-1990');
+
+1 row inserted.
+
+SQL> insert into student values (11111114,'Sheen','Cindy','25-Dec-1996');
+
+1 row inserted.
+
+SQL> 
+SQL> insert into unit values ('FIT5132','Introduction to Databases');
+
+1 row inserted.
+
+SQL> insert into unit values ('FIT5016','Project');
+
+1 row inserted.
+
+SQL> insert into unit values ('FIT5111','Student''s Life');
+
+1 row inserted.
+
+SQL> insert into unit values ('FIT9999','FIT Last Unit');
+
+1 row inserted.
+
+SQL> 
+SQL> insert into enrolment values (11111111,'FIT5132',2013,'1',35,'N');
+
+1 row inserted.
+
+SQL> insert into enrolment values (11111111,'FIT5016',2013,'1',61,'C');
+
+1 row inserted.
+
+SQL> insert into enrolment values (11111111,'FIT5132',2013,'2',42,'N');
+
+1 row inserted.
+
+SQL> insert into enrolment values (11111111,'FIT5111',2013,'2',76,'D');
+
+1 row inserted.
+
+SQL> insert into enrolment values (11111111,'FIT5132',2014,'2',null,null);
+
+1 row inserted.
+
+SQL> insert into enrolment values (11111112,'FIT5132',2013,'2',83,'HD');
+
+1 row inserted.
+
+SQL> insert into enrolment values (11111112,'FIT5111',2013,'2',79,'D');
+
+1 row inserted.
+
+SQL> insert into enrolment values (11111113,'FIT5132',2014,'2',null,null);
+
+1 row inserted.
+
+SQL> insert into enrolment values (11111113,'FIT5111',2014,'2',null,null);
+
+1 row inserted.
+
+SQL> insert into enrolment values (11111114,'FIT5111',2014,'2',null,null);
+
+1 row inserted.
+
+SQL> 
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> -- 7.3.2
+SQL> -- Using seqeunces for INSERT
+SQL> -- ================================================================
+SQL> -- Create sequence
+SQL> create sequence student_seq start with 11111115 increment by 1;
+
+Error starting at line : 48 in command -
+create sequence student_seq start with 11111115 increment by 1
+Error report -
+ORA-00955: name is already used by an existing object
+00955. 00000 -  "name is already used by an existing object"
+*Cause:    
+*Action:
+SQL> 
+SQL> select * from cat;
+
+TABLE_NAME                                                                                                                       TABLE_TYPE 
+-------------------------------------------------------------------------------------------------------------------------------- -----------
+STUDENT_SEQ                                                                                                                      SEQUENCE   
+ARTIST                                                                                                                           TABLE      
+ARTWORK                                                                                                                          TABLE      
+CUSTOMER                                                                                                                         TABLE      
+ENROLMENT                                                                                                                        TABLE      
+EXHIBIT                                                                                                                          TABLE      
+FIT5111_STUDENT                                                                                                                  TABLE      
+GALLERY                                                                                                                          TABLE      
+MOVEMENT                                                                                                                         TABLE      
+SALE                                                                                                                             TABLE      
+STUDENT                                                                                                                          TABLE      
+
+TABLE_NAME                                                                                                                       TABLE_TYPE 
+-------------------------------------------------------------------------------------------------------------------------------- -----------
+STYLE                                                                                                                            TABLE      
+UNIT                                                                                                                             TABLE      
+
+13 rows selected. 
+
+SQL> -- cat refers to your Oracle catalogue, the objects which you own
+SQL> 
+SQL> -- Insert Mickey Mouse
+SQL> insert into student values (student_seq.nextval, 'Mouse', 'Mickey', '01-Feb-1980');
+
+1 row inserted.
+
+SQL> 
+SQL> select * from student;
+
+   STU_NBR STU_LNAME                                          STU_FNAME                                          STU_DOB  
+---------- -------------------------------------------------- -------------------------------------------------- ---------
+  11111111 Bloggs                                             Fred                                               01/JAN/90
+  11111112 Nice                                               Nick                                               10/OCT/94
+  11111113 Wheat                                              Wendy                                              05/MAY/90
+  11111114 Sheen                                              Cindy                                              25/DEC/96
+  11111175 Mouse                                              Mickey                                             01/FEB/80
+
+SQL> 
+SQL> -- Add an enrolment
+SQL> insert into enrolment values (student_seq.currval, 'FIT5132', 2016, '2', null, null);
+
+1 row inserted.
+
+SQL> 
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> select * from enrolment;
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK ENR
+---------- ------- ---------- - ---------- ---
+  11111111 FIT5132       2013 1         35 N  
+  11111111 FIT5016       2013 1         61 C  
+  11111111 FIT5132       2013 2         42 N  
+  11111111 FIT5111       2013 2         76 D  
+  11111111 FIT5132       2014 2               
+  11111112 FIT5132       2013 2         83 HD 
+  11111112 FIT5111       2013 2         79 D  
+  11111113 FIT5132       2014 2               
+  11111113 FIT5111       2014 2               
+  11111114 FIT5111       2014 2               
+  11111175 FIT5132       2016 2               
+
+11 rows selected. 
+
+SQL> 
+SQL> -- 7.3.3
+SQL> -- Advanced Insert
+SQL> -- ================================================================
+SQL> 
+SQL> insert into student values (student_seq.nextval, 'Last', 'First', '01-Jan-1999');
+
+1 row inserted.
+
+SQL> 
+SQL> insert into enrolment values (student_seq.currval, 
+  2    (select unit_code from unit where unit_name = 'Introduction to Databases'),
+  3     2016, '2', null, null);
+
+1 row inserted.
+
+SQL> 
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> select * from student;
+
+   STU_NBR STU_LNAME                                          STU_FNAME                                          STU_DOB  
+---------- -------------------------------------------------- -------------------------------------------------- ---------
+  11111111 Bloggs                                             Fred                                               01/JAN/90
+  11111112 Nice                                               Nick                                               10/OCT/94
+  11111113 Wheat                                              Wendy                                              05/MAY/90
+  11111114 Sheen                                              Cindy                                              25/DEC/96
+  11111175 Mouse                                              Mickey                                             01/FEB/80
+  11111176 Last                                               First                                              01/JAN/99
+
+6 rows selected. 
+
+SQL> select * from enrolment;
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK ENR
+---------- ------- ---------- - ---------- ---
+  11111111 FIT5132       2013 1         35 N  
+  11111111 FIT5016       2013 1         61 C  
+  11111111 FIT5132       2013 2         42 N  
+  11111111 FIT5111       2013 2         76 D  
+  11111111 FIT5132       2014 2               
+  11111112 FIT5132       2013 2         83 HD 
+  11111112 FIT5111       2013 2         79 D  
+  11111113 FIT5132       2014 2               
+  11111113 FIT5111       2014 2               
+  11111114 FIT5111       2014 2               
+  11111175 FIT5132       2016 2               
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK ENR
+---------- ------- ---------- - ---------- ---
+  11111176 FIT5132       2016 2               
+
+12 rows selected. 
+
+SQL> 
+SQL> -- 7.3.4
+SQL> -- Create table and Insert data from a single SQL statement
+SQL> -- ================================================================
+SQL> 
+SQL> create table FIT5111_STUDENT
+  2   as select *
+  3   from enrolment
+  4   where unit_code = 'FIT5111';
+
+Error starting at line : 84 in command -
+create table FIT5111_STUDENT
+ as select *
+ from enrolment
+ where unit_code = 'FIT5111'
+Error report -
+ORA-00955: name is already used by an existing object
+00955. 00000 -  "name is already used by an existing object"
+*Cause:    
+*Action:
+SQL> 
+SQL> --Check if the table exist
+SQL> select * from cat;
+
+TABLE_NAME                                                                                                                       TABLE_TYPE 
+-------------------------------------------------------------------------------------------------------------------------------- -----------
+STUDENT_SEQ                                                                                                                      SEQUENCE   
+ARTIST                                                                                                                           TABLE      
+ARTWORK                                                                                                                          TABLE      
+CUSTOMER                                                                                                                         TABLE      
+ENROLMENT                                                                                                                        TABLE      
+EXHIBIT                                                                                                                          TABLE      
+FIT5111_STUDENT                                                                                                                  TABLE      
+GALLERY                                                                                                                          TABLE      
+MOVEMENT                                                                                                                         TABLE      
+SALE                                                                                                                             TABLE      
+STUDENT                                                                                                                          TABLE      
+
+TABLE_NAME                                                                                                                       TABLE_TYPE 
+-------------------------------------------------------------------------------------------------------------------------------- -----------
+STYLE                                                                                                                            TABLE      
+UNIT                                                                                                                             TABLE      
+
+13 rows selected. 
+
+SQL> 
+SQL> --List the contents of the table
+SQL> select * from fit5111_student;
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK ENR
+---------- ------- ---------- - ---------- ---
+  11111111 FIT5111       2013 2         76 D  
+  11111112 FIT5111       2013 2         79 D  
+  11111113 FIT5111       2014 2               
+  11111114 FIT5111       2014 2               
+
+SQL> 
+SQL> commit;
+
+Commit complete.
+
+SQL> set echo off
