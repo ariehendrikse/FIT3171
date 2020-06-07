@@ -1,0 +1,122 @@
+SQL> 
+SQL> 
+SQL> UPDATE UNIT
+  2  SET UNIT_NAME = 'place holder unit'
+  3  WHERE UNIT_CODE = 'FIT9999';
+
+0 rows updated.
+
+SQL> 
+SQL> --Enter the mark and grade for the student with the student number of 11111113 for the unit
+SQL> --code FIT5132 that the student enrolled in semester 2 of 2014. The mark is 75 and the grade
+SQL> --is D.
+SQL> 
+SQL> UPDATE enrolment
+  2  set enrol_mark = 75
+  3  where stu_nbr = 11111113 and
+  4  unit_code='FIT5132' and
+  5  enrol_semester = 2
+  6  and enrol_year = 2014;
+
+0 rows updated.
+
+SQL> 
+SQL> UPDATE enrolment
+  2  set enrol_grade = 'D'
+  3  where stu_nbr = 11111113 and
+  4  unit_code='FIT5132' and
+  5  enrol_semester = 2
+  6  and enrol_year = 2014;
+
+0 rows updated.
+
+SQL> 
+SQL> UPDATE enrolment
+  2  set enrol_grade = 'P1'
+  3  where enrol_mark BETWEEN 45 and 54;
+
+0 rows updated.
+
+SQL> 
+SQL> UPDATE enrolment
+  2  set enrol_grade = 'P2'
+  3  where enrol_mark BETWEEN 55 and 64;
+
+0 rows updated.
+
+SQL> 
+SQL> UPDATE enrolment
+  2  set enrol_grade = 'C'
+  3  where enrol_mark BETWEEN 65 and 74;
+
+0 rows updated.
+
+SQL> 
+SQL> UPDATE enrolment
+  2  set enrol_grade = 'D'
+  3  where enrol_mark BETWEEN 74 and 84;
+
+0 rows updated.
+
+SQL> 
+SQL> UPDATE enrolment
+  2  set enrol_grade = 'HD'
+  3  where enrol_mark BETWEEN 85 and 100;
+
+0 rows updated.
+
+SQL> 
+SQL> DELETE FROM ENROLMENT
+  2  WHERE stu_nbr = 11111114 and
+  3  enrol_semester = 2 and
+  4  enrol_year = 2014;
+
+0 rows deleted.
+
+SQL> 
+SQL> DELETE FROM STUDENT
+  2  WHERE stu_nbr = '11111113';
+
+0 rows deleted.
+
+SQL> 
+SQL> insert into student values (11111113,'Wheat','Wendy','05-May-1990');
+
+1 row inserted.
+
+SQL> 
+SQL> ALTER TABLE ENROLMENT DROP CONSTRAINT fk_enrolment_unit;
+
+Table ENROLMENT altered.
+
+SQL> 
+SQL> ALTER TABLE ENROLMENT DROP CONSTRAINT fk_enrolment_student;
+
+Table ENROLMENT altered.
+
+SQL> 
+SQL> ALTER TABLE ENROLMENT ADD CONSTRAINT fk_enrolment_student foreign key (stu_nbr)
+  2        references student (stu_nbr) on delete cascade;
+
+Table ENROLMENT altered.
+
+SQL> 
+SQL> ALTER TABLE ENROLMENT ADD CONSTRAINT fk_enrolment_unit foreign key (unit_code)
+  2        references unit (unit_code) on delete cascade;
+
+Table ENROLMENT altered.
+
+SQL> 
+SQL> DELETE FROM STUDENT
+  2  WHERE stu_nbr = '11111113';
+
+1 row deleted.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> commit;
+
+Commit complete.
+
+SQL> set echo off
