@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F75A9ADA-3C49-9E8E-6309-77473CA3E41B" name="OFFICER">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:59:15 UTC</createdTime>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="officer_id" id="659AB1FF-D02D-B15C-5C71-B066F78A15A0">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:59:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[officer id]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="officer_fname" id="EE781ACC-6264-D96E-5AE1-375CAE0F3988">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:59:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[first name]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="officer_lname" id="FA25789A-6324-D502-6F85-1AF1D988BD67">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 03:00:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[last name]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="26AC9FB1-E22F-32EB-E06A-2434ABEF7B2C" name="OFFICER PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:59:37 UTC</createdTime>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>659AB1FF-D02D-B15C-5C71-B066F78A15A0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

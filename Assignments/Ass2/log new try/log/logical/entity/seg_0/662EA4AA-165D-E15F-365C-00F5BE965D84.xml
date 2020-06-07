@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="662EA4AA-165D-E15F-365C-00F5BE965D84" name="SUSPENSION">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 03:00:35 UTC</createdTime>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="sus_date" id="617D0F72-9B53-356A-B7E9-C1488A4F03AA">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 03:00:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[dat of suspension]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sus_enddate" id="5CB2A3DB-25DD-1CA6-8FAE-19F90E2D6D89">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 03:00:54 UTC</createdTime>
+<commentInRDBMS><![CDATA[end of suspension]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lic_no" id="30077C3F-24DA-5759-E040-A40DAE823C67">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 03:02:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[license number]]></commentInRDBMS>
+<generatorID>A1D69181-51A1-3BA0-4A08-CC6DA20CFC92</generatorID>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<referedAttribute>CF958E6F-3B89-C23F-B282-070284C340E5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5BD553EC-B8FC-07DC-4D98-A2F788DEC17B" name="SUSPENSION PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 03:00:53 UTC</createdTime>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>617D0F72-9B53-356A-B7E9-C1488A4F03AA</attributeRef>
+<attributeRef>30077C3F-24DA-5759-E040-A40DAE823C67</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

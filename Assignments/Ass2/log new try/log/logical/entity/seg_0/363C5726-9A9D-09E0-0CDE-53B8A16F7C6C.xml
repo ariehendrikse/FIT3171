@@ -1,0 +1,159 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="363C5726-9A9D-09E0-0CDE-53B8A16F7C6C" name="DRIVER">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:48:21 UTC</createdTime>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="lic_no" id="CF958E6F-3B89-C23F-B282-070284C340E5">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:48:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[license number]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lic_fname" id="09B3B672-AD5F-2C37-EFF6-31577216346F">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:48:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[first name]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lic_lname" id="E37BABF7-ECFB-934D-2C62-45B724B147D3">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:48:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[last name]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lic_mobile" id="BC7443AE-2310-38C2-9914-CB4078C50192">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:49:06 UTC</createdTime>
+<commentInRDBMS><![CDATA[mobile number]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lic_street" id="75BB01F1-51AE-1EE9-FDE8-FBD7A66397AF">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:49:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[street of address]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lic_town" id="E0CC1A2C-41E7-A677-BBB8-4110FF7D4F06">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:49:34 UTC</createdTime>
+<commentInRDBMS><![CDATA[town of address]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lic_postcode" id="9522B860-9F19-03BC-2436-048717A9C6BE">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:49:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[postcode of address]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lic_dob" id="BA83B47E-34B3-67FE-D6B5-4F50C2FC6285">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:49:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[date of birth]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lic_expiry" id="FE3BDB21-0964-73FE-0C25-39CB01739DC4">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:50:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[expiry date]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F1945789-1364-0E71-5215-AAFDB993A794" name="DRIVER PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:48:31 UTC</createdTime>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CF958E6F-3B89-C23F-B282-070284C340E5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

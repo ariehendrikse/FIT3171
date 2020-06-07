@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9DCAEF4C-69FA-FB93-8F1A-A3B9CC1C4B5E" name="OFFENCE">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:22:04 UTC</createdTime>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="off_no" id="A526E311-05DF-99C3-59A2-46A08B04CF7C">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:31:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[offence number]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="off_datetime" id="D48F2921-40FB-E82D-94D5-9D6C933F0FA9">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:32:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[date and time of offence]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="off_location" id="1D29BCFE-6C26-74DB-A3BE-5F97F3B356DB">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:32:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[Location of offence]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dem_code" id="B22F66D5-15C2-D5E6-C197-8ADCC4297AA1">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 03:01:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[Demerit code]]></commentInRDBMS>
+<generatorID>6B7ADB66-FC77-A2CB-B513-87E23EEBFF7C</generatorID>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<referedAttribute>579B2630-11DF-DB90-33FA-24736EEE7B8D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="officer_id" id="B031B779-6505-2543-E0A8-190B24CBADCD">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 03:01:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[officer id]]></commentInRDBMS>
+<generatorID>98BCA223-E7B8-DE50-0B73-8B04EEF0F5B8</generatorID>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<referedAttribute>659AB1FF-D02D-B15C-5C71-B066F78A15A0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lic_no" id="8762CFCE-3E64-5342-E62F-BB7A690AE620">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 03:02:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[license number]]></commentInRDBMS>
+<generatorID>3651D2F3-2589-B4AB-2CC4-23364891543A</generatorID>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<referedAttribute>CF958E6F-3B89-C23F-B282-070284C340E5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="veh_vin" id="6E83FC22-C1E7-D179-540A-4B6C2EACDA99">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 03:19:34 UTC</createdTime>
+<generatorID>13A5F82C-D199-9386-446D-3FFA2C53027C</generatorID>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<referedAttribute>995DCEA1-85DA-06A8-63FD-3A50232D5432</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>17</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9427487B-4625-46D1-522C-5D800738D66D" name="OFFENCE PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:31:53 UTC</createdTime>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A526E311-05DF-99C3-59A2-46A08B04CF7C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

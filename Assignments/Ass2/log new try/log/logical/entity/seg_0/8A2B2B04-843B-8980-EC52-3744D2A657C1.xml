@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8A2B2B04-843B-8980-EC52-3744D2A657C1" name="DEMERIT">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:34:28 UTC</createdTime>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="dem_code" id="579B2630-11DF-DB90-33FA-24736EEE7B8D">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:34:34 UTC</createdTime>
+<commentInRDBMS><![CDATA[Demerit code]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dem_description" id="6F21757A-B543-1F2C-6DAC-956C1DD02D8F">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:34:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[description]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75</dataTypeSize>
+<ownDataTypeParameters>75,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dem_points" id="47B73BE8-58E7-75D1-4B0C-F5BFE25AFABD">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:35:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[demerit points]]></commentInRDBMS>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="50C6154C-287D-F1A9-A8CD-14A31B87B2BB" name="DEMERIT PK">
+<createdBy>ariehendrikse</createdBy>
+<createdTime>2020-06-07 02:34:39 UTC</createdTime>
+<ownerDesignName>log</ownerDesignName>
+<engineerTo>
+<item key="BE437735-E4F1-E682-02FE-BFBE316C2725" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>579B2630-11DF-DB90-33FA-24736EEE7B8D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
