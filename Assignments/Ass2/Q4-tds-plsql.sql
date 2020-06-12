@@ -21,7 +21,7 @@ so please look out for that
 
 COMMIT;
 CREATE OR REPLACE TRIGGER maintain_officer_bookings
-BEFORE DELETE OR INSERT OR UPDATE OF officer_id ON offence
+BEFORE DELETE OR INSERT OR UPDATE ON offence
 FOR EACH ROW
 BEGIN
   -- Trigger to automatically maintain the offence count in
@@ -207,7 +207,6 @@ ROLLBACK;
 Hint: to carry out this task, you need to create another table where the history of all drivers’ license expiry dates is recorded. In the table, include the licence number, the current expiry date, the new expiry date and the date when the update is done.
 */
 /*Please copy your trigger code and any other necessary SQL statements after this line*/
-
 CREATE TABLE expiry (
     lic_no         CHAR(10) NOT NULL,
     lic_expiry     DATE NOT NULL
@@ -218,12 +217,12 @@ COMMENT ON COLUMN expiry.lic_no IS
 
 COMMENT ON COLUMN expiry.lic_expiry IS
     'Expiry date of license';
-
+ALTER TABLE expiry ADD CONSTRAINT expiry_pk PRIMARY KEY ( lic_no );
 ALTER TABLE expiry
     ADD CONSTRAINT expiry_license FOREIGN KEY ( lic_no )
         REFERENCES driver ( lic_no );
 
-ALTER TABLE expiry ADD CONSTRAINT expiry_pk PRIMARY KEY ( lic_no );
+
 
 CREATE OR REPLACE TRIGGER maintain_expiry_dates
 BEFORE UPDATE of lic_expiry ON expiry
@@ -237,6 +236,7 @@ BEGIN
   END IF;
 END;
 /
+COMMIT;
 INSERT INTO expiry VALUES (100001,to_date('20-AUG-2013 14:05:53', 'DD-MON-YYYY HH24:MI:SS'));
 UPDATE expiry
 SET lic_expiry = to_date('20-AUG-2014 14:05:53', 'DD-MON-YYYY HH24:MI:SS')
@@ -248,10 +248,10 @@ FROM
     expiry;
 ROLLBACK;
 --Test valid date
-INSERT INTO expiry VALUES (100001,to_date('20-AUG-2013 14:05:53', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO expiry VALUES (100002,to_date('20-AUG-2013 14:05:53', 'DD-MON-YYYY HH24:MI:SS'));
 UPDATE expiry
 SET lic_expiry = to_date('20-AUG-2017 14:05:53', 'DD-MON-YYYY HH24:MI:SS')
-WHERE lic_no=100001;
+WHERE lic_no=100002;
 SELECT
     *
 FROM
