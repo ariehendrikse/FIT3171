@@ -61,7 +61,8 @@ ORDER BY driver.lic_no ASC,suspension.sus_date DESC;
 */
 --PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
 
-SELECT demerit.dem_code "Demerit Code",demerit.dem_description "Demerit Description",NVL(ytl,0) "Total Offences (All Months)",NVL(jan,0) "Jan",NVL(feb,0) "Feb",NVL(mar,0) "Mar",NVL(apr,0) "Apr",NVL(may,0) "May",NVL(jun,0) "Jun",NVL(jul,0) "Jul",NVL(aug,0) "Aug",NVL(sep,0) "Sep",NVL(oct,0) "Oct",NVL(nov,0) "Nov",NVL(dec,0) "Dec" 
+SELECT  demerit.dem_code "Demerit Code",demerit.dem_description "Demerit Description",NVL(ytl,0) "Total Offences (All Months)",
+        NVL(jan,0) "Jan",NVL(feb,0) "Feb",NVL(mar,0) "Mar",NVL(apr,0) "Apr",NVL(may,0) "May",NVL(jun,0) "Jun",NVL(jul,0) "Jul",NVL(aug,0) "Aug",NVL(sep,0) "Sep",NVL(oct,0) "Oct",NVL(nov,0) "Nov",NVL(dec,0) "Dec" 
 FROM demerit FULL JOIN 
             (SELECT  dem_code, COUNT(dem_code) as ytl
                 FROM offence
@@ -194,14 +195,42 @@ WHERE w.b =q.cnt
 ORDER BY w.a;
 
 
-a "Demerit Code",b "Demerit Description",c "License No.",d "Driver Fullname",
- a, demerit.dem_description b, driver.lic_no c,driver.lic_fname || ' ' || driver.lic_lname d,
 /*
 2(viii) Query 8
 */
 --PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
 
 
+
+        
+SELECT  r "Region", count(region.r)  "Total Vehicle's Manufactured", round(count(region.r)/ (SELECT COUNT(*) FROM vehicle)*100.00,2) "Percentage"
+FROM  
+(SELECT (CASE 
+    WHEN veh_vin BETWEEN 'A' and 'C' THEN 'Africa'
+    WHEN veh_vin BETWEEN 'J' and 'R' THEN 'Asia'
+    WHEN veh_vin BETWEEN 'S' and 'Z' THEN 'Europe'
+    WHEN veh_vin BETWEEN '1' and '5' THEN 'North America'
+    WHEN veh_vin BETWEEN '6' and '7' THEN 'Oceania'
+    WHEN veh_vin BETWEEN '8' and '9' THEN 'South America'
+    ELSE 'Unknown'
+END) AS r
+FROM vehicle v ORDER BY count(r)) region
+GROUP BY region.r
+
+UNION
+SELECT 'Total',SUM(COUNT(smry.r)),SUM(ROUND(COUNT(smry.r)/(SELECT COUNT(*) FROM vehicle)*100,2)) FROM 
+(SELECT (CASE 
+    WHEN veh_vin BETWEEN 'A' and 'C' THEN 'Africa'
+    WHEN veh_vin BETWEEN 'J' and 'R' THEN 'Asia'
+    WHEN veh_vin BETWEEN 'S' and 'Z' THEN 'Europe'
+    WHEN veh_vin BETWEEN '1' and '5' THEN 'North America'
+    WHEN veh_vin BETWEEN '6' and '7' THEN 'Oceania'
+    WHEN veh_vin BETWEEN '8' and '9' THEN 'South America'
+    ELSE 'Unknown'
+END) as r
+FROM vehicle v) smry
+GROUP BY smry.r
+;
 
 
 
