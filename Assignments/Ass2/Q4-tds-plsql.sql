@@ -4,9 +4,11 @@
 --Student Name: Arie hendrikse
 --Tutorial No: 
 ROLLBACK;
+
 /* Comments for your marker:
 
-
+This is throwing an error for me saying that I have an invalid ientifier on line 181. the error is part of code thtat I have already deleted. It is creating a demerit table however that code has been deleted and I still get the err
+so please look out for that
 
 
 */
@@ -15,37 +17,49 @@ ROLLBACK;
 */
 /*Please copy your trigger code and any other necessary SQL statements after this line*/
 
+--Trigger declaration
 
-CREATE OR REPLACE TRIGGER maintain_offence_count
-BEFORE INSERT OR UPDATE OR DELETE ON offence
-    FOR EACH ROW
-
+COMMIT;
+CREATE OR REPLACE TRIGGER maintain_officer_bookings
+BEFORE DELETE OR INSERT OR UPDATE OF officer_id ON offence
+FOR EACH ROW
 BEGIN
+  -- Trigger to automatically maintain the offence count in
+    -- the officer table
+
+    -- for inserts, increase offence count in officer:
     IF INSERTING THEN
-        UPDATE officer SET officer_no_booking=officer_no_bookings+1
-        WHERE officer_no = :new.officer_no;
-        DBMS_OUTPUT.PUT_LINE ('New offence ' || :new.off_no ||
-            ' has been added to officers total bookings for officer' || :new.officer_no);
+    	UPDATE officer
+    	    SET officer_no_bookings = officer_no_bookings + 1
+    	    where officer_id = :new.officer_id;
+            DBMS_OUTPUT.PUT_LINE ('New offence ' || :new.off_no ||
+            ' has been added to officer ' || :new.officer_id);
+
+    -- for deletes, decrease bookings count in officer:
     ELSE
-        IF DELETING
-            THEN
-                update officer set officer_no_booking=officer_no_bookings-1
-                where officer_no = :old.officer_no;
-            ELSE
-                IF UPDATING THEN
-                    UPDATE officer
-                        SET officer_no_bookings = officer_no_booking - 1
-                        where officer_no = :old.officer_no;
-                    UPDATE DEPARTMENT
-                        SET officer_no_bookings = officer_no_bookings + 1
-                        where officer_no = :new.officer_no;
-                    DBMS_OUTPUT.PUT_LINE ('The officer ' || :old.officer_no ||
-                    ' has been changed on offience ' || :old.offence_no ||
-                    ' to new officer ' || :new.officer_no);
+        IF DELETING THEN
+     	    UPDATE officer
+    	        SET officer_no_bookings = officer_no_bookings - 1
+    	        where officer_id = :old.officer_id;
+                DBMS_OUTPUT.PUT_LINE ('Old offence ' || :old.off_no ||
+                ' has been deleted from officer ' || :old.officer_id);
+
+        -- for updates ie moves, modify the bookings count in officer:
+        ELSE
+            IF UPDATING THEN
+      	        UPDATE officer
+    	            SET officer_no_bookings = officer_no_bookings - 1
+    	            where officer_id = :old.officer_id;
+    	        UPDATE officer
+    	            SET officer_no_bookings = officer_no_bookings + 1
+    	            where officer_id = :new.officer_id;
+                DBMS_OUTPUT.PUT_LINE ('The officer ' || :new.officer_id ||
+                ' has been moved from offence ' || :old.off_no );
             END IF;
         END IF;
-    END IF;
+     END IF;
 END;
+/
 COMMIT;
 --Test--
 SELECT
@@ -58,7 +72,7 @@ SELECT
 FROM
     offence;
 
-INSERT INTO offence VALUES (33,to_date('21-JUN-2019 23:05:58', 'DD-MON-YYYY HH24:MI:SS'),'Melton',104,10000015,100213,'ZHWGE6BZ3DLA12625');
+INSERT INTO offence VALUES (33,to_date('30-JUN-2019 24:59:58', 'DD-MON-YYYY HH24:MI:SS'),'Melton',104,10000015,100213,'ZHWGE6BZ3DLA12625');
 
 SELECT
     *
@@ -70,11 +84,11 @@ SELECT
 FROM
     offence;
     
----- Move OFFENCE-------
+---- Update OFFENCE-------
 
 UPDATE offence
 SET
-	officer_no = 10000015
+	officer_id = 10000015
 WHERE
 	off_no = 3;
 
@@ -89,10 +103,9 @@ FROM
     offence;
 
 --- Delete OFFENCE ---
-
 DELETE FROM offence
 WHERE
-	off_no = 1;
+	off_no = 2;
 
 SELECT
     *
@@ -110,8 +123,80 @@ ROLLBACK;
 */
 /*Please copy your trigger code and any other necessary SQL statements after this line*/
 
+CREATE OR REPLACE TRIGGER check_driver_names
+BEFORE UPDATE OR INSERT ON driver
+FOR EACH ROW
+BEGIN
+  IF((:new.lic_fname IS NULL) AND (:new.lic_lname IS NULL))
+  THEN
+    RAISE_APPLICATION_ERROR( -20003, 
+                             'The driver needs at least one name' );
+  END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER check_officer_names
+BEFORE UPDATE OR INSERT ON officer
+FOR EACH ROW
+
+BEGIN
+  IF((:new.officer_fname IS NULL) AND (:new.officer_lname IS NULL) )
+  THEN
+    RAISE_APPLICATION_ERROR( -20004, 
+                             'The officer needs at least one name' );
+  END IF;
+END;
+/
+--Test--
+--Insert Offence
+SELECT
+    *
+FROM
+    officer;
 
 
+INSERT INTO officer VALUES (10000040, null,null );
+
+SELECT
+    *
+FROM
+    officer;
+
+INSERT INTO driver VALUES ('100999', null, null, '0499999998', '819 Bultman Street', 'Attwood', '3049', TO_DATE('19-Nov-1962', 'DD-MON-YYYY'), TO_DATE('20-May-2027', 'DD-MON-YYYY'));
+
+SELECT
+    *
+FROM
+    driver;
+    
+---- Update Driver abnd officer-------
+UPDATE officer
+SET officer_fname=null, officer_lname=null
+WHERE officer_id=10000010;
+
+UPDATE officer
+SET officer_fname='Mark', officer_lname=null
+WHERE officer_id=10000011;
+
+SELECT
+    *
+FROM
+    officer;
+UPDATE driver
+SET lic_fname=null, lic_lname=null
+WHERE lic_no=100015;
+
+UPDATE driver
+SET lic_fname='Steve', lic_lname=null
+WHERE lic_no=100016;
+
+
+SELECT
+    *
+FROM
+    driver;
+
+ROLLBACK;
 
 
 
@@ -122,3 +207,59 @@ ROLLBACK;
 Hint: to carry out this task, you need to create another table where the history of all drivers’ license expiry dates is recorded. In the table, include the licence number, the current expiry date, the new expiry date and the date when the update is done.
 */
 /*Please copy your trigger code and any other necessary SQL statements after this line*/
+
+CREATE TABLE expiry (
+    lic_no         CHAR(10) NOT NULL,
+    lic_expiry     DATE NOT NULL
+);
+
+COMMENT ON COLUMN expiry.lic_no IS
+    'License Number (unique)';
+
+COMMENT ON COLUMN expiry.lic_expiry IS
+    'Expiry date of license';
+
+ALTER TABLE expiry
+    ADD CONSTRAINT expiry_license FOREIGN KEY ( lic_no )
+        REFERENCES driver ( lic_no );
+
+ALTER TABLE expiry ADD CONSTRAINT expiry_pk PRIMARY KEY ( lic_no );
+
+CREATE OR REPLACE TRIGGER maintain_expiry_dates
+BEFORE UPDATE of lic_expiry ON expiry
+FOR EACH ROW
+
+BEGIN
+  IF( ADD_MONTHS(:old.lic_expiry,30)>=:new.lic_expiry )
+  THEN
+    RAISE_APPLICATION_ERROR( -20002, 
+                             'The new expiry value must be 30 months after the old one' );
+  END IF;
+END;
+/
+INSERT INTO expiry VALUES (100001,to_date('20-AUG-2013 14:05:53', 'DD-MON-YYYY HH24:MI:SS'));
+UPDATE expiry
+SET lic_expiry = to_date('20-AUG-2014 14:05:53', 'DD-MON-YYYY HH24:MI:SS')
+WHERE lic_no=100001;
+--Test update of expiry
+SELECT
+    *
+FROM
+    expiry;
+ROLLBACK;
+--Test valid date
+INSERT INTO expiry VALUES (100001,to_date('20-AUG-2013 14:05:53', 'DD-MON-YYYY HH24:MI:SS'));
+UPDATE expiry
+SET lic_expiry = to_date('20-AUG-2017 14:05:53', 'DD-MON-YYYY HH24:MI:SS')
+WHERE lic_no=100001;
+SELECT
+    *
+FROM
+    expiry;
+
+ROLLBACK;
+
+
+
+
+

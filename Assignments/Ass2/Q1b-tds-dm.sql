@@ -25,7 +25,7 @@ INCREMENT BY    1
 NOCACHE;
 
 
-
+COMMIT;
 /*
 1b(ii) Take the necessary steps in the database to record data.
 */
@@ -62,7 +62,7 @@ VALUES (
 SELECT * from offence;
 
 
-
+COMMIT;
 /*
 1b(iii) Take the necessary steps in the database to record changes. 
 */
@@ -77,5 +77,5 @@ SET dem_code=   (
 WHERE off_datetime=to_date('16-OCT-2019 21:00:00', 'DD-MON-YYYY HH24:MI:SS') and lic_no=100389;--may not be needed as datetie is unique.
 
 
-
+COMMIT;
 
